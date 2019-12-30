@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-const Title = styled.h1`
-  font-family: sans-serif;
-`;
+// Component imports
+import Layout from '../components/styled_components/global/Layout';
 
-const Index = () => <Title>Index</Title>;
+// Asset imports
+import logo_full from '../assets/logo/logo_full.svg';
 
-export default Index;
+const Home = () => <Layout></Layout>;
+
+export default Home;
