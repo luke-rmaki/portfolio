@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import colors from '../../../../utils/colors';
+import colors from '../../../utils/colors';
 
 const MainHeadingMobile = styled.h1`
   font-family: 'Monserrat', sans-serif;
@@ -21,6 +21,7 @@ const SubHeadingMobile = styled.h2`
     font-style: italic;
     font-size: 36px;
     color: ${colors.main};
+    text-decoration: none;
   }
 `;
 
