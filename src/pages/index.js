@@ -6,6 +6,7 @@ import Layout from '../components/styled_components//layout/Layout';
 import Wrapper from '../components/styled_components/layout/Wrapper';
 import { SubHeadingMobile } from '../components/styled_components//typography/mobile';
 import Logo from '../components/index/Logo';
+
 import {
   AnimateLeft,
   AnimateCenter,

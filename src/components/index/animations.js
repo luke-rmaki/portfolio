@@ -11,7 +11,7 @@ export const AnimateLeft = props => {
 
 export const AnimateCenter = props => {
   const animation = useSpring({
-    from: { transform: 'translateY(200%)', opacity: 0 },
+    from: { transform: 'translateY(-400%)', opacity: 0 },
     to: { transform: 'translateY(0%)', opacity: 1 },
   });
   return <animated.div style={animation}>{props.children}</animated.div>;
