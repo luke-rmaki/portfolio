@@ -32,8 +32,8 @@ const LogoWrapper: any = styled.div`
 
 const Logo: React.FunctionComponent = () => {
   const nameAnimation: React.CSSProperties = useSpring({
-    transform: 'translateY(0%)',
-    from: { transform: 'translateY(-1000%)' },
+    opacity: 1,
+    from: { opacity: 0 },
     config: {
       duration: 2000,
       easing: t =>
