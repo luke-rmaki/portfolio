@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Link } from 'gatsby';
 
 // Component imports
@@ -13,7 +13,7 @@ import {
   AnimateRight,
 } from '../components/index/animations';
 
-const Home = () => {
+const Home: React.FunctionComponent = () => {
   return (
     <Layout>
       <Logo />

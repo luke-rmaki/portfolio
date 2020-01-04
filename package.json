@@ -4,6 +4,7 @@
   "description": "Portfolio for Luke Ruokaismaki",
   "author": "Luke Ruokaismaki",
   "dependencies": {
+    "@types/styled-components": "^4.4.1",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.18.17",
     "gatsby-image": "^2.2.34",
@@ -12,6 +13,7 @@
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-sharp": "^2.3.4",
     "gatsby-plugin-styled-components": "^3.1.14",
+    "gatsby-plugin-typescript": "^2.1.23",
     "gatsby-source-filesystem": "^2.1.39",
     "gatsby-transformer-sharp": "^2.3.6",
     "prop-types": "^15.7.2",
@@ -23,6 +25,9 @@
     "styled-reset": "^4.0.8"
   },
   "devDependencies": {
+    "@types/node": "^13.1.4",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
     "prettier": "^1.19.1"
   },
   "scripts": {
