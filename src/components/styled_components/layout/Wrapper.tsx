@@ -1,6 +1,16 @@
-import styled from 'styled-components';
+import styled, { StyledComponent } from 'styled-components';
 
-const Wrapper = styled.div`
+interface Position {
+  bottom: number;
+  left: number;
+}
+
+interface Props {
+  absolute: boolean;
+  position: Position;
+}
+
+const Wrapper: StyledComponent<'div', any, {}, null> = styled.div<Props>`
   display: flex;
   width: 100%;
   justify-content: space-between;

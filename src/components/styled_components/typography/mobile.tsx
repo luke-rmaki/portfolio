@@ -1,14 +1,14 @@
-import styled from 'styled-components';
+import styled, { StyledComponent } from 'styled-components';
 import colors from '../../../utils/colors';
 
-const MainHeadingMobile = styled.h1`
+const MainHeadingMobile: StyledComponent<'h1', any, {}, never> = styled.h1`
   font-family: 'Monserrat', sans-serif;
   font-weight: bold;
   font-size: 40px;
   color: ${colors.main};
 `;
 
-const SubHeadingMobile = styled.h2`
+const SubHeadingMobile: StyledComponent<'h2', any, {}, never> = styled.h2`
   font-family: 'Monserrat', sans-serif;
   font-weight: normal;
   font-style: italic;
@@ -25,7 +25,7 @@ const SubHeadingMobile = styled.h2`
   }
 `;
 
-const ParagraphMobile = styled.p`
+const ParagraphMobile: StyledComponent<'p', any, {}, never> = styled.p`
   font-family: 'Monserrat', sans-serif;
   font-size: 18px;
   color: ${colors.white};
