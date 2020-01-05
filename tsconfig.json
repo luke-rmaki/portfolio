@@ -3,9 +3,16 @@
   "jsxPragma": "jsx", // defaults to "React"
   "allExtensions": true, // defaults to false
   "include": ["src/**/*"],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "public", ".cache"],
   "allowSyntheticDefaultImports": true,
   "compilerOptions": {
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "module": "commonjs",
+    "target": "esnext",
+    "lib": ["dom", "ESNext"],
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": false
   }
 }

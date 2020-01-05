@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { useSpring, useTrail, animated } from 'react-spring';
+import { useSpring, animated } from 'react-spring';
 
 import colors from '../../utils/colors';
 
