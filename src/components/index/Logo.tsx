@@ -44,14 +44,14 @@ const Logo: React.FunctionComponent = () => {
     transform: 'translateX(10%)',
     from: { transform: 'translateX(100%)' },
     config: {
-      duration: 1000,
+      duration: 500,
     },
   });
   const rightAnimation: React.CSSProperties = useSpring({
     transform: 'translateX(-10%)',
     from: { transform: 'translateX(-100%)' },
     config: {
-      duration: 1000,
+      duration: 500,
     },
   });
   return (

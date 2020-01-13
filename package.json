@@ -4,6 +4,8 @@
   "description": "Portfolio for Luke Ruokaismaki",
   "author": "Luke Ruokaismaki",
   "dependencies": {
+    "@types/jest": "^24.0.25",
+    "@types/react-test-renderer": "^16.9.1",
     "@types/styled-components": "^4.4.1",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.18.17",
@@ -26,16 +28,21 @@
     "typescript": "^3.7.4"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.7.7",
     "@types/node": "^13.1.4",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
     "@typescript-eslint/eslint-plugin": "^2.14.0",
     "@typescript-eslint/parser": "^2.14.0",
+    "babel-jest": "^24.9.0",
+    "babel-preset-gatsby": "^0.2.26",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.17.0",
-    "prettier": "^1.19.1"
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "react-test-renderer": "^16.12.0"
   },
   "scripts": {
     "build": "gatsby build",
@@ -44,7 +51,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "test": "jest --watchAll",
     "type-check": "tsc"
   }
 }
