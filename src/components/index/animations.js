@@ -1,24 +1,24 @@
 import * as React from 'react';
 import { useSpring, animated } from 'react-spring';
 
-export const AnimateLeft: React.FunctionComponent = props => {
-  const animation: React.CSSProperties = useSpring({
+export const AnimateLeft = props => {
+  const animation = useSpring({
     from: { transform: 'translateX(200%)', opacity: 0 },
     to: { transform: 'translatex(0%)', opacity: 1 },
   });
   return <animated.div style={animation}>{props.children}</animated.div>;
 };
 
-export const AnimateCenter: React.FunctionComponent = props => {
-  const animation: React.CSSProperties = useSpring({
+export const AnimateCenter = props => {
+  const animation = useSpring({
     from: { transform: 'translateY(-400%)', opacity: 0 },
     to: { transform: 'translateY(0%)', opacity: 1 },
   });
   return <animated.div style={animation}>{props.children}</animated.div>;
 };
 
-export const AnimateRight: React.FunctionComponent = props => {
-  const animation: React.CSSProperties = useSpring({
+export const AnimateRight = props => {
+  const animation = useSpring({
     from: { transform: 'translateX(-200%)', opacity: 0 },
     to: { transform: 'translatex(0%)', opacity: 1 },
   });

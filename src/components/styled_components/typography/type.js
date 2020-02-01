@@ -1,8 +1,8 @@
-import styled, { StyledComponent } from 'styled-components';
+import styled from 'styled-components';
 import colors from '../../../utils/colors';
 import mediaQueries from '../../../utils/mediaQueries';
 
-const MainHeading: StyledComponent<'h1', any, {}, never> = styled.h1`
+const MainHeading = styled.h1`
   font-family: 'Monserrat', sans-serif;
   font-weight: bold;
   font-size: 40px;
@@ -12,7 +12,7 @@ const MainHeading: StyledComponent<'h1', any, {}, never> = styled.h1`
   }
 `;
 
-const SubHeading: StyledComponent<'h2', any, {}, never> = styled.h2`
+const SubHeading = styled.h2`
   font-family: 'Monserrat', sans-serif;
   font-weight: normal;
   font-style: italic;
@@ -41,7 +41,7 @@ const SubHeading: StyledComponent<'h2', any, {}, never> = styled.h2`
   }
 `;
 
-const Paragraph: StyledComponent<'p', any, {}, never> = styled.p`
+const Paragraph = styled.p`
   font-family: 'Monserrat', sans-serif;
   font-size: 18px;
   color: ${colors.white};

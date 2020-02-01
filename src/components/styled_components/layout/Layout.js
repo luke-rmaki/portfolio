@@ -1,9 +1,9 @@
 import * as React from 'react';
-import styled, { createGlobalStyle, StyledComponent } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 import colors from '../../../utils/colors';
 
-const GlobalStyle: any = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   ${reset}
   @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
   body {
@@ -11,17 +11,13 @@ const GlobalStyle: any = createGlobalStyle`
   }
  `;
 
-const LayoutWrapper: StyledComponent<'div', any, {}, never> = styled.div`
+const LayoutWrapper = styled.div`
   background-color: ${colors.black};
 
   min-height: 100vh;
 `;
 
-interface Props {
-  children: React.ReactNode;
-}
-
-const Layout: React.FunctionComponent = ({ children }: Props) => (
+const Layout = ({ children }) => (
   <LayoutWrapper>
     <GlobalStyle />
     {children}

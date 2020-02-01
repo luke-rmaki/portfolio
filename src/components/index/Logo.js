@@ -4,7 +4,7 @@ import { useSpring, animated } from 'react-spring';
 
 import colors from '../../utils/colors';
 
-const Name: any = styled(animated.h2)`
+const Name = styled(animated.h2)`
   font-family: 'Montserrat', sans-serif;
   color: ${colors.white};
   font-size: 30px;
@@ -18,7 +18,7 @@ const Name: any = styled(animated.h2)`
   }
 `;
 
-const LogoWrapper: any = styled.div`
+const LogoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,8 +30,8 @@ const LogoWrapper: any = styled.div`
   }
 `;
 
-const Logo: React.FunctionComponent = () => {
-  const nameAnimation: React.CSSProperties = useSpring({
+const Logo = () => {
+  const nameAnimation = useSpring({
     opacity: 1,
     from: { opacity: 0 },
     config: {
@@ -40,14 +40,14 @@ const Logo: React.FunctionComponent = () => {
         t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t,
     },
   });
-  const leftAnimation: React.CSSProperties = useSpring({
+  const leftAnimation = useSpring({
     transform: 'translateX(10%)',
     from: { transform: 'translateX(100%)' },
     config: {
       duration: 500,
     },
   });
-  const rightAnimation: React.CSSProperties = useSpring({
+  const rightAnimation = useSpring({
     transform: 'translateX(-10%)',
     from: { transform: 'translateX(-100%)' },
     config: {
