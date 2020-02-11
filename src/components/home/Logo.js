@@ -2,11 +2,9 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 
-import colors from '../../utils/colors';
-
 const Name = styled(animated.h2)`
   font-family: 'Montserrat', sans-serif;
-  color: ${colors.white};
+  color: var(--white);
   font-size: 30px;
   white-space: nowrap;
 

@@ -1,32 +1,19 @@
 import React from 'react';
 
 // Component imports
-import Layout from '../components/styled_components/layout/Layout';
-import PageWrapper from '../components/about/PageWrapper';
-import {
-  HeadingWrapper,
-  ImageWrapper,
-  SocialMediaWrapper,
-} from '../components/about/componentWrappers';
-import Logo from '../components/Logo';
-import Image from '../components/about/Image';
-import SocialMedia from '../components/about/SocialMedia';
-import { MainHeading } from '../components/styled_components/typography/type';
+import Logo from '../components/global/Logo';
+import { Image, SocialMedia, Content } from '../components/about';
+import { Layout, Spacer } from '../components/global/layout';
+import { MainHeading } from '../components/global/typography';
 
 const About = () => (
   <Layout>
     <Logo />
-    <PageWrapper>
-      <HeadingWrapper>
-        <MainHeading>About</MainHeading>
-      </HeadingWrapper>
-      <ImageWrapper>
-        <Image />
-      </ImageWrapper>
-      <SocialMediaWrapper>
-        <SocialMedia />
-      </SocialMediaWrapper>
-    </PageWrapper>
+    <Spacer heightMobile={150} breakpoint={1000} heightDesktop={200} />
+    <MainHeading style={{ paddingLeft: '25px' }}>About</MainHeading>
+    <Image />
+    <Content />
+    <SocialMedia />
   </Layout>
 );
 

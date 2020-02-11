@@ -4,7 +4,8 @@ import styled from 'styled-components';
 
 const LogoWrapper = styled.div`
   position: absolute;
-  min-width: 100px;
+  min-width: 150px;
+  max-width: 200px;
   width: 10%;
 `;
 

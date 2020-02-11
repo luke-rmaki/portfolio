@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
-import { SubHeading } from '../styled_components/typography/type';
+import { Subheading } from '../global/typography';
 
 const createIconLinkObjectArray = (icons, links) => {
   const iconLinkArray = [];
@@ -24,6 +24,13 @@ const IconWrapper = styled.div`
 
   img {
     flex: 0 1;
+    height: 50px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    img {
+      height: 100px;
+    }
   }
 `;
 
@@ -53,7 +60,7 @@ const SocialMedia = () => {
 
   return (
     <>
-      <SubHeading>Find me on...</SubHeading>
+      <Subheading style={{ paddingLeft: '25px' }}>Find me on...</Subheading>
       <IconWrapper>
         {dataArray.map(icon => (
           <a key={icon.name} href={icon.link}>
