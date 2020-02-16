@@ -7,6 +7,11 @@ const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
   body {
     max-width: 100vw;
+    box-sizing: border-box;
+
+    * {
+    box-sizing: border-box;
+    }
   }
 
   :root {

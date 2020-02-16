@@ -1,18 +1,24 @@
 import React from 'react';
 
 // Component imports
-import Logo from '../components/global/Logo';
-import { Image, SocialMedia, Content } from '../components/about';
-import { Layout, Spacer } from '../components/global/layout';
+import Menu from '../components/global/Menu';
+import {
+  Image,
+  SocialMedia,
+  Content,
+  ImageContentContainer,
+} from '../components/about';
+import { Layout } from '../components/global/layout';
 import { MainHeading } from '../components/global/typography';
 
-const About = () => (
+const About = props => (
   <Layout>
-    <Logo />
-    <Spacer heightMobile={150} breakpoint={1000} heightDesktop={200} />
+    <Menu path={props.path} />
     <MainHeading style={{ paddingLeft: '25px' }}>About</MainHeading>
-    <Image />
-    <Content />
+    <ImageContentContainer>
+      <Image />
+      <Content />
+    </ImageContentContainer>
     <SocialMedia />
   </Layout>
 );

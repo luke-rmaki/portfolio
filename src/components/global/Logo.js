@@ -7,9 +7,13 @@ const LogoWrapper = styled.div`
   min-width: 150px;
   max-width: 200px;
   width: 10%;
+  opacity: ${props => (props.isLogoVisible ? '1' : '0')};
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 1000;
 `;
 
-const Logo = () => {
+const Logo = props => {
   const data = useStaticQuery(graphql`
     query LogoQuery {
       file(relativePath: { eq: "logo.svg" }) {
@@ -18,8 +22,8 @@ const Logo = () => {
     }
   `);
   return (
-    <LogoWrapper>
-      <img src={data.file.publicURL} />
+    <LogoWrapper isLogoVisible={props.isVisible}>
+      <img onClick={props.callback} src={data.file.publicURL} />
     </LogoWrapper>
   );
 };

@@ -4,6 +4,7 @@ const Flex = styled.div`
   display: flex;
   justify-content: space-between;
   width: ${props => (props.width ? props.width : '100%')};
+  flex-wrap: wrap;
 `;
 
 export default Flex;
