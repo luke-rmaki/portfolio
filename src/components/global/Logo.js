@@ -10,7 +10,6 @@ const LogoWrapper = styled.div`
   opacity: ${props => (props.isLogoVisible ? '1' : '0')};
   transition: all 0.5s;
   cursor: pointer;
-  z-index: 1000;
 `;
 
 const Logo = props => {
@@ -22,8 +21,8 @@ const Logo = props => {
     }
   `);
   return (
-    <LogoWrapper isLogoVisible={props.isVisible}>
-      <img onClick={props.callback} src={data.file.publicURL} />
+    <LogoWrapper isLogoVisible={props.isVisible} onClick={props.callback}>
+      <img src={data.file.publicURL} />
     </LogoWrapper>
   );
 };

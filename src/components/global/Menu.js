@@ -11,6 +11,7 @@ const MenuList = styled.div`
     props.isVisible === true ? '10px 0 50px 0' : '5px 0 25px 0'};
   align-items: center;
   justify-content: center;
+  visibility: ${props => (props.isVisible === true ? 'visible' : 'hidden')};
   opacity: ${props => (props.isVisible === true ? 1 : 0)};
   transition: all 0.5s;
   ul {
@@ -45,29 +46,9 @@ const MenuList = styled.div`
   }
 `;
 
-const Menu = () => {
+const Menu = ({ path }) => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isLogoVisible, setIsLogoVisible] = useState(true);
-
-  // const data = useStaticQuery(graphql`
-  //   query PageQuery {
-  //     allSitePage {
-  //       distinct(field: path)
-  //       nodes {
-  //         internalComponentName
-  //         path
-  //       }
-  //     }
-  //   }
-  // `);
-  // const pages = data.allSitePage.nodes
-  //   .map(node => {
-  //     return {
-  //       path: node.path,
-  //       name: node.internalComponentName.substring(9), // cuts "Component" from the start of internalComponentName
-  //     };
-  //   })
-  //   .filter(page => !page.path.includes('dev')); // removes dev 404 page from menu
   return (
     <>
       <LogoSpring>
@@ -81,25 +62,16 @@ const Menu = () => {
       </LogoSpring>
       <MenuList isVisible={isMenuVisible}>
         <ul>
-          {/* {pages
-            .filter(page => page.path !== path)
-            .map(page => (
-              <li key={page.name}>
-                <Link to={page.path}>
-                  {page.name === 'Index' ? 'Home' : page.name}
-                </Link>
-              </li>
-            ))} */}
           <li>
-            <Link to="/index">Home</Link>
+            <Link to="/">Home</Link>
           </li>
-          <li>
+          <li style={{ display: path === '/about/' ? 'none' : 'block' }}>
             <Link to="/about">About</Link>
           </li>
-          <li>
+          <li style={{ display: path === '/blog/' ? 'none' : 'block' }}>
             <Link to="/blog">Blog</Link>
           </li>
-          <li>
+          <li style={{ display: path === '/contact/' ? 'none' : 'block' }}>
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
