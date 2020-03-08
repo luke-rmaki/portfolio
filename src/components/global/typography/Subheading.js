@@ -6,7 +6,7 @@ const SubHeading = styled.h2`
   font-weight: normal;
   font-style: italic;
   font-size: 30px;
-  color: var(--main);
+  color: ${props => (props.color ? `var(--${props.color})` : 'var(--main)')};
 
   a {
     font-family: 'Monserrat', sans-serif;

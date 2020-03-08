@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 
 import Logo from './Logo';
 import { LogoSpring } from '../global/springs';
@@ -45,7 +45,7 @@ const MenuList = styled.div`
   }
 `;
 
-const Menu = ({ path }) => {
+const Menu = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isLogoVisible, setIsLogoVisible] = useState(true);
 

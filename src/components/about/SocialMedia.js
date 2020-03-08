@@ -20,7 +20,8 @@ const createIconLinkObjectArray = (icons, links) => {
 const IconWrapper = styled.div`
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: 50px;
+  padding-bottom: 50px;
 
   img {
     flex: 0 1;
@@ -28,8 +29,10 @@ const IconWrapper = styled.div`
   }
 
   @media screen and (min-width: 1000px) {
+    width: 80%;
+    margin: 50px auto 0 auto;
     img {
-      height: 100px;
+      height: 80px;
     }
   }
 `;
@@ -60,7 +63,9 @@ const SocialMedia = () => {
 
   return (
     <>
-      <Subheading style={{ paddingLeft: '25px' }}>Find me on...</Subheading>
+      <Subheading color="main-shade" style={{ paddingLeft: '25px' }}>
+        Find me on...
+      </Subheading>
       <IconWrapper>
         {dataArray.map(icon => (
           <a key={icon.name} href={icon.link}>

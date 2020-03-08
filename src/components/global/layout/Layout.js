@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     max-width: 100vw;
     box-sizing: border-box;
+    overflow: auto;
 
     * {
     box-sizing: border-box;
