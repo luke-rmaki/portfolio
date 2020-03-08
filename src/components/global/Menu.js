@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 
 import Logo from './Logo';
+import { LogoSpring } from '../global/springs';
 
 const MenuList = styled.div`
   display: flex;
@@ -48,37 +49,39 @@ const Menu = ({ path }) => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isLogoVisible, setIsLogoVisible] = useState(true);
 
-  const data = useStaticQuery(graphql`
-    query PageQuery {
-      allSitePage {
-        distinct(field: path)
-        nodes {
-          internalComponentName
-          path
-        }
-      }
-    }
-  `);
-  const pages = data.allSitePage.nodes
-    .map(node => {
-      return {
-        path: node.path,
-        name: node.internalComponentName.substring(9), // cuts "Component" from the start of internalComponentName
-      };
-    })
-    .filter(page => !page.path.includes('dev')); // removes dev 404 page from menu
+  // const data = useStaticQuery(graphql`
+  //   query PageQuery {
+  //     allSitePage {
+  //       distinct(field: path)
+  //       nodes {
+  //         internalComponentName
+  //         path
+  //       }
+  //     }
+  //   }
+  // `);
+  // const pages = data.allSitePage.nodes
+  //   .map(node => {
+  //     return {
+  //       path: node.path,
+  //       name: node.internalComponentName.substring(9), // cuts "Component" from the start of internalComponentName
+  //     };
+  //   })
+  //   .filter(page => !page.path.includes('dev')); // removes dev 404 page from menu
   return (
     <>
-      <Logo
-        isVisible={isLogoVisible}
-        callback={() => {
-          setIsLogoVisible(false);
-          setIsMenuVisible(true);
-        }}
-      />
+      <LogoSpring>
+        <Logo
+          isVisible={isLogoVisible}
+          callback={() => {
+            setIsLogoVisible(false);
+            setIsMenuVisible(true);
+          }}
+        />
+      </LogoSpring>
       <MenuList isVisible={isMenuVisible}>
         <ul>
-          {pages
+          {/* {pages
             .filter(page => page.path !== path)
             .map(page => (
               <li key={page.name}>
@@ -86,7 +89,19 @@ const Menu = ({ path }) => {
                   {page.name === 'Index' ? 'Home' : page.name}
                 </Link>
               </li>
-            ))}
+            ))} */}
+          <li>
+            <Link to="/index">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/blog">Blog</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
         </ul>
         <span
           onClick={() => {
