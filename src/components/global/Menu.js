@@ -43,6 +43,7 @@ const MenuList = styled.div`
     font-size: 20px;
     cursor: pointer;
     padding-left: 20px;
+    font-family: 'Montserrat', sans-serif;
   }
 `;
 
