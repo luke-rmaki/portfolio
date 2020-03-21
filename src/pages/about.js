@@ -10,16 +10,30 @@ import {
 } from '../components/about';
 import { Layout } from '../components/global/layout';
 import { MainHeading } from '../components/global/typography';
+import { HeadingSpring } from '../components/global/springs';
+import {
+  ImageSpring,
+  ContentSpring,
+  SocialMediaSpring,
+} from '../components/global/springs/about';
 
 const About = props => (
   <Layout>
     <Menu path={props.path} />
-    <MainHeading style={{ paddingLeft: '25px' }}>About</MainHeading>
+    <HeadingSpring>
+      <MainHeading style={{ paddingLeft: '25px' }}>About</MainHeading>
+    </HeadingSpring>
     <ImageContentContainer>
-      <Image />
-      <Content />
+      <ImageSpring>
+        <Image />
+      </ImageSpring>
+      <ContentSpring>
+        <Content />
+      </ContentSpring>
     </ImageContentContainer>
-    <SocialMedia />
+    <SocialMediaSpring>
+      <SocialMedia />
+    </SocialMediaSpring>
   </Layout>
 );
 
