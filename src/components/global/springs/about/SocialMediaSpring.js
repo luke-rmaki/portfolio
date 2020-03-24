@@ -3,7 +3,7 @@ import { useSpring, animated } from 'react-spring';
 
 const SocialMediaSpring = props => {
   const animation = useSpring({
-    from: { transform: 'translateY(100%)' },
+    from: { transform: 'translateY(1000%)' },
     to: { transform: 'translateY(0%)' },
     delay: 1100,
   });

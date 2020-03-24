@@ -4,7 +4,7 @@ import { useSpring, animated } from 'react-spring';
 const LogoSpring = props => {
   const animation = useSpring({
     from: { transform: 'rotateY(90deg)' },
-    to: { transform: 'rotateY(0deg)', position: 'fixed' },
+    to: { transform: 'rotateY(0deg)', position: 'fixed', zIndex: 500 },
   });
 
   return <animated.div style={animation}>{props.children}</animated.div>;

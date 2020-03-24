@@ -14,28 +14,48 @@ const MenuList = styled.div`
   visibility: ${props => (props.isVisible === true ? 'visible' : 'hidden')};
   opacity: ${props => (props.isVisible === true ? 1 : 0)};
   transition: all 0.5s;
+  background-color: var(--white);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1000;
   ul {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    height: 100%;
+    justify-content: center;
     li {
       padding: 15px 0;
       a {
         font-family: 'Montserrat', sans-serif;
         font-size: 25px;
-        color: var(--white);
+        color: var(--black);
         text-decoration: none;
+
+        &:hover {
+          color: var(--main);
+        }
       }
     }
   }
   /* set menu to horizontal */
   @media screen and (min-width: 800px) {
     margin-bottom: 100px;
+    width: 100%;
+    height: unset;
+    background: none;
+    z-index: 200;
     ul {
       flex-direction: row;
       width: 80%;
       justify-content: space-around;
+      li {
+        a {
+          color: var(--white);
+        }
+      }
     }
   }
   span {

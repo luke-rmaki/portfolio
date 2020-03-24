@@ -8,7 +8,7 @@ import {
   Content,
   ImageContentContainer,
 } from '../components/about';
-import { Layout } from '../components/global/layout';
+import { Layout, Spacer } from '../components/global/layout';
 import { MainHeading } from '../components/global/typography';
 import { HeadingSpring } from '../components/global/springs';
 import {
@@ -20,6 +20,7 @@ import {
 const About = props => (
   <Layout>
     <Menu path={props.path} />
+    <Spacer heightMobile={150} />
     <HeadingSpring>
       <MainHeading style={{ paddingLeft: '25px' }}>About</MainHeading>
     </HeadingSpring>
