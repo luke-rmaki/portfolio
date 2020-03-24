@@ -68,7 +68,12 @@ const SocialMedia = () => {
       </Subheading>
       <IconWrapper>
         {dataArray.map(icon => (
-          <a key={icon.name} href={icon.link}>
+          <a
+            key={icon.name}
+            target="_blank"
+            rel="noopener noreferrer"
+            href={icon.link}
+          >
             <img src={icon.iconURL} />
           </a>
         ))}
