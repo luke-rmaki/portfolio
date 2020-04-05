@@ -5,6 +5,7 @@ import { Subheading } from '../global/typography';
 
 const createIconLinkObjectArray = (icons, links) => {
   const iconLinkArray = [];
+  // create an object containing both the icon and link and push into an array
   icons.forEach(icon => {
     const iconLinkObj = { iconURL: icon.node.publicURL, name: icon.node.name };
     links.forEach(link => {

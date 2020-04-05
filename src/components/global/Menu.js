@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { graphql, useStaticQuery } from 'gatsby';
 import { Link } from 'gatsby';
 
 import Logo from './Logo';
@@ -19,6 +20,12 @@ const MenuList = styled.div`
   width: 100vw;
   position: fixed;
   z-index: 1000;
+
+  img {
+    position: absolute;
+    z-index: -1000;
+  }
+
   ul {
     text-align: center;
     display: flex;
@@ -47,6 +54,10 @@ const MenuList = styled.div`
     height: unset;
     background: none;
     z-index: 200;
+
+    img {
+      display: none;
+    }
     ul {
       flex-direction: row;
       width: 80%;
@@ -70,6 +81,13 @@ const MenuList = styled.div`
 const Menu = ({ path }) => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isLogoVisible, setIsLogoVisible] = useState(true);
+  const data = useStaticQuery(graphql`
+    query MenuBackgroundQuery {
+      file(relativePath: { eq: "logo_white.svg" }) {
+        publicURL
+      }
+    }
+  `);
   return (
     <>
       <LogoSpring>
@@ -82,6 +100,7 @@ const Menu = ({ path }) => {
         />
       </LogoSpring>
       <MenuList isVisible={isMenuVisible}>
+        <img src={data.file.publicURL} />
         <ul>
           <li>
             <Link to="/">Home</Link>
