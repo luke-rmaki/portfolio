@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 
 // Component imports
 import { BlogList } from '../components/blog';
-import Menu from '../components/nav/Menu';
+import { Menu } from '../components/nav/';
 import { Layout, Spacer } from '../components/layout';
 import { MainHeading } from '../components//typography';
 import { HeadingSpring } from '../components/springs';

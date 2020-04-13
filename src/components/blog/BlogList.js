@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 
+import { ContentSpring } from '../springs/about';
+
 const BlogListWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -11,8 +13,9 @@ const BlogListWrapper = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
 
-    * {
-      flex: 1 0;
+    > * {
+      flex: 1 0 50px;
+      padding: 10px;
     }
   }
 `;
@@ -36,12 +39,14 @@ const BlogList = list => {
   return (
     <BlogListWrapper>
       {list.list.map(edge => (
-        <BlogListing key={edge.node.frontmatter.path}>
-          <Link to={edge.node.frontmatter.path}>
-            <Img fluid={edge.node.frontmatter.image.childImageSharp.fluid} />
-            <div id="excerpt">{edge.node.excerpt}</div>
-          </Link>
-        </BlogListing>
+        <ContentSpring key={edge.node.frontmatter.path}>
+          <BlogListing>
+            <Link to={edge.node.frontmatter.path}>
+              <Img fluid={edge.node.frontmatter.image.childImageSharp.fluid} />
+              <div id="excerpt">{edge.node.excerpt}</div>
+            </Link>
+          </BlogListing>
+        </ContentSpring>
       ))}
     </BlogListWrapper>
   );

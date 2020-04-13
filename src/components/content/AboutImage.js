@@ -11,7 +11,7 @@ const ImgWrapper = styled.div`
     border-radius: 100%;
 
     @media screen and (min-width: 800px) {
-      border-radius: 50px;
+      border-radius: 20px;
     }
   }
 `;
