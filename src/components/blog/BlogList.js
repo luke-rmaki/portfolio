@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 
 import { ContentSpring } from '../springs/about';
+import { Subheading, Paragraph } from '../typography';
 
 const BlogListWrapper = styled.div`
   display: flex;
@@ -25,10 +26,18 @@ const BlogListing = styled.div`
   margin: 20px 0;
 
   div#excerpt {
+    overflow: hidden;
+    h2 {
+      font-size: 2rem;
+      padding-bottom: 20px;
+    }
+    p {
+      font-size: 1rem;
+    }
     background-color: rgba(211, 212, 244, 0.5);
     position: absolute;
     bottom: 0;
-    height: 100px;
+    height: 150px;
     color: var(--black);
     margin: auto;
     padding: 10px;
@@ -43,7 +52,10 @@ const BlogList = list => {
           <BlogListing>
             <Link to={edge.node.frontmatter.path}>
               <Img fluid={edge.node.frontmatter.image.childImageSharp.fluid} />
-              <div id="excerpt">{edge.node.excerpt}</div>
+              <div id="excerpt">
+                <Subheading>{edge.node.frontmatter.title}</Subheading>
+                <Paragraph>{edge.node.excerpt}</Paragraph>
+              </div>
             </Link>
           </BlogListing>
         </ContentSpring>
