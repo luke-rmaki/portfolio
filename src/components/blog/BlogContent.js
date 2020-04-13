@@ -33,6 +33,7 @@ const BlogContent = styled.div`
     }
   }
 
+  /* Image and caption container */
   figure {
     padding: 0;
 
