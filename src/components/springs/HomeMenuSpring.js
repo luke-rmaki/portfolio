@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useSpring, animated } from 'react-spring';
 
-const AnimateMenu = props => {
+const HomeMenuSpring = props => {
   let animateProperties;
   switch (props.direction) {
     case 'left':
@@ -30,4 +30,4 @@ const AnimateMenu = props => {
   return <animated.div style={animation}>{props.children}</animated.div>;
 };
 
-export default AnimateMenu;
+export default HomeMenuSpring;

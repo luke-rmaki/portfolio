@@ -3,10 +3,10 @@ import { graphql } from 'gatsby';
 
 // Component imports
 import { BlogList } from '../components/blog';
-import Menu from '../components/global/Menu';
-import { Layout, Spacer, Flex } from '../components/global/layout';
-import { MainHeading } from '../components/global/typography';
-import { HeadingSpring } from '../components/global/springs';
+import Menu from '../components/nav/Menu';
+import { Layout, Spacer } from '../components/layout';
+import { MainHeading } from '../components//typography';
+import { HeadingSpring } from '../components/springs';
 
 const Blog = (
   {

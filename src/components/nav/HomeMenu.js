@@ -1,10 +1,13 @@
 import styled from 'styled-components';
-import { Flex } from '../global/layout';
 
-const Menu = styled(Flex)`
+const Menu = styled.div`
   /* position parent */
+  display: flex;
   position: absolute;
   bottom: 120px;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: nowrap;
 
   /* position links */
   div {

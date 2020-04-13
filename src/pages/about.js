@@ -1,21 +1,16 @@
 import React from 'react';
 
 // Component imports
-import Menu from '../components/global/Menu';
-import {
-  Image,
-  SocialMedia,
-  Content,
-  ImageContentContainer,
-} from '../components/about';
-import { Layout, Spacer } from '../components/global/layout';
-import { MainHeading } from '../components/global/typography';
-import { HeadingSpring } from '../components/global/springs';
+import Menu from '../components/nav/Menu';
+import { AboutImage, AboutContent, SocialMedia } from '../components/content';
+import { Layout, Spacer, Flex } from '../components/layout';
+import { MainHeading, Subheading } from '../components/typography';
+import { HeadingSpring } from '../components/springs';
 import {
   ImageSpring,
   ContentSpring,
   SocialMediaSpring,
-} from '../components/global/springs/about';
+} from '../components/springs/about';
 
 const About = props => (
   <Layout>
@@ -24,15 +19,16 @@ const About = props => (
     <HeadingSpring>
       <MainHeading style={{ paddingLeft: '25px' }}>About</MainHeading>
     </HeadingSpring>
-    <ImageContentContainer>
-      <ImageSpring>
-        <Image />
-      </ImageSpring>
+    <Flex style={{ paddingTop: '30px' }}>
       <ContentSpring>
-        <Content />
+        <AboutContent />
       </ContentSpring>
-    </ImageContentContainer>
+      <ImageSpring>
+        <AboutImage />
+      </ImageSpring>
+    </Flex>
     <SocialMediaSpring>
+      <Subheading style={{ paddingLeft: '25px' }}>Find me on...</Subheading>
       <SocialMedia />
     </SocialMediaSpring>
   </Layout>

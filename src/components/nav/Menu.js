@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Link } from 'gatsby';
 
-import Logo from './Logo';
-import { LogoSpring } from '../global/springs';
+import Logo from '../logo/Logo';
+import { LogoSpring } from '../springs';
 
 const MenuList = styled.div`
   display: flex;

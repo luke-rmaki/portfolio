@@ -1,6 +1,6 @@
 ---
 name: 'about'
-links: https://github.com/luke-rmaki/, https://www.linkedin.com/in/luke-ruokaismaki-01b537159/
+links: https://github.com/luke-rmaki/, https://www.linkedin.com/in/luke-ruokaismaki-01b537159/, https://twitter.com/luke_rmaki, https://codepen.io/luke_rmaki
 type: 'page'
 ---
 

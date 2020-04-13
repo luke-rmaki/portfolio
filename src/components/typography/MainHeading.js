@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import mediaQueries from '../../../utils/mediaQueries';
+import mediaQueries from '../../utils/mediaQueries';
 
 const MainHeading = styled.h1`
   font-family: 'Monserrat', sans-serif;

@@ -33,7 +33,6 @@ const BlogListing = styled.div`
 `;
 
 const BlogList = list => {
-  console.log(list);
   return (
     <BlogListWrapper>
       {list.list.map(edge => (
