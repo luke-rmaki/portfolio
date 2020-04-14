@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import mediaQueries from '../../utils/mediaQueries';
 
 const SubHeading = styled.h2`
-  font-family: 'Monserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   font-style: italic;
   font-size: 30px;
