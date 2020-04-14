@@ -21,10 +21,16 @@ const Form = () => {
   };
 
   return (
-    <StyledForm data-netlify="true" method="POST" name="contact" step={step}>
+    <StyledForm
+      netlify-honeypot="bot-field"
+      data-netlify="true"
+      name="contact"
+      step={step}
+    >
       <label style={{ opacity: showWarnings ? 1 : 0 }}>
         Please enter an email address
       </label>
+      <input type="hidden" name="bot-field" />
       <input
         type="email"
         value={email}
