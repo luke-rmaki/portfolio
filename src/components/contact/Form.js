@@ -31,6 +31,7 @@ const Form = () => {
         <label style={{ opacity: showWarnings ? 1 : 0 }}>
           Please enter an email address
         </label>
+        <input type="hidden" name="form-name" value="contact" />
         <input
           type="email"
           value={email}
