@@ -21,35 +21,36 @@ const Form = () => {
   };
 
   return (
-    <StyledForm
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      method="post"
-      name="contact"
-      step={step}
-    >
-      <label style={{ opacity: showWarnings ? 1 : 0 }}>
-        Please enter an email address
-      </label>
-      <input
-        type="email"
-        value={email}
-        onChange={e => setEmail(e.target.value)}
-        placeholder="What's your email?"
-        name="email"
-        required
-      />
-      <textarea
-        value={message}
-        onChange={e => setMessage(e.target.value)}
-        placeholder="Leave a message"
-        name="message"
-        required
-      />
-      <Button
-        type={step === 1 ? 'button' : 'input'}
-        setter={step === 1 ? handleNext : setStep}
-      />
+    <StyledForm step={step}>
+      <form
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        method="post"
+        name="contact"
+      >
+        <label style={{ opacity: showWarnings ? 1 : 0 }}>
+          Please enter an email address
+        </label>
+        <input
+          type="email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          placeholder="What's your email?"
+          name="email"
+          required
+        />
+        <textarea
+          value={message}
+          onChange={e => setMessage(e.target.value)}
+          placeholder="Leave a message"
+          name="message"
+          required
+        />
+        <Button
+          type={step === 1 ? 'button' : 'input'}
+          setter={step === 1 ? handleNext : setStep}
+        />
+      </form>
     </StyledForm>
   );
 };
