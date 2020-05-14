@@ -2,14 +2,14 @@ import styled from 'styled-components';
 import mediaQueries from '../../utils/mediaQueries';
 
 const SubHeading = styled.h2`
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Fira Code', monospace;
   font-weight: normal;
   font-style: italic;
   font-size: 30px;
   color: ${props => (props.color ? `var(--${props.color})` : 'var(--main)')};
 
   a {
-    font-family: 'Monserrat', sans-serif;
+    font-family: 'Fira Code', monospace;
     font-weight: normal;
     font-style: italic;
     font-size: 30px;

@@ -4,7 +4,7 @@ import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
-  @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
   body {
     max-width: 100vw;
     box-sizing: border-box;

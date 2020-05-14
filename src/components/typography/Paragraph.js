@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import mediaQueries from '../../utils/mediaQueries';
 
 const Paragraph = styled.p`
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Fira Code', monospace;
   font-size: 18px;
   color: var(--white);
   ${mediaQueries.typography} {
