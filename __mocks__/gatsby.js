@@ -1,5 +1,4 @@
 const React = require('react');
-const jest = require('jest');
 const gatsby = jest.requireActual('gatsby');
 
 module.exports = {
@@ -24,5 +23,7 @@ module.exports = {
       })
   ),
   StaticQuery: jest.fn(),
-  useStaticQuery: jest.fn(),
+  useStaticQuery: jest
+    .fn()
+    .mockReturnValue({ data: { file: { publicURL: 'thing' } } }),
 };
