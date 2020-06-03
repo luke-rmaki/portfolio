@@ -27,7 +27,7 @@ const BlogList = list => {
     <BlogListWrapper>
       {list.list.map(edge => (
         <ContentSpring key={edge.node.frontmatter.path}>
-          <BlogListing>
+          <BlogListing data-cy="blog-post">
             <Link to={edge.node.frontmatter.path}>
               <Img fluid={edge.node.frontmatter.image.childImageSharp.fluid} />
               <div id="excerpt">
