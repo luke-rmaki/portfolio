@@ -42,6 +42,6 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test:open": "cypress open",
-    "test:closed": "cypress run"
+    "test:closed": "cypress run --headed"
   }
 }
