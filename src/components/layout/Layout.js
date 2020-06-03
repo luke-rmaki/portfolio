@@ -20,6 +20,22 @@ const GlobalStyle = createGlobalStyle`
     --main: #6845E6;
     --main-shade: #7F6EB9;
     --white: #D3D4F4;
+
+    --font: 'Fira Code', monospace;
+
+    --mainheading-size: 2.5rem;
+    --subheading-size: 1.8rem;
+    --paragraph-size: 1.1rem;
+  
+  @media (min-width: 500px) {
+    :root {
+    --mainheading-size: 3rem;
+    --subheading-size: 3rem;
+    --paragraph-size: 1.25rem;
+
+    }
+  }
+
   }
  `;
 

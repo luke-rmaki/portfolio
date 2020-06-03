@@ -2,7 +2,11 @@ import React from 'react';
 
 // Component imports
 import Menu from '../components/nav/Menu';
-import { AboutImage, AboutContent, SocialMedia } from '../components/content';
+import {
+  AboutImage,
+  AboutContent,
+  SocialMedia,
+} from '../components/about_content';
 import { Layout, Spacer, Flex } from '../components/layout';
 import { MainHeading, Subheading } from '../components/typography';
 import { HeadingSpring } from '../components/springs';

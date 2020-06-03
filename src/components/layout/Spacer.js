@@ -4,7 +4,7 @@ const Spacer = styled.div`
   width: ${props => `${props.widthMobile}px` || '100vw'};
   height: ${props => `${props.heightMobile}px` || '0px'};
 
-  @media screen and (min-width: '800px'}) {
+  @media screen and (min-width: '500px') {
     width: ${props => `${props.widthDesktop}px` || '100vw'};
     height: ${props => `${props.heightDesktop}px` || '0px'};
   }

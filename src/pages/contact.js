@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Component imports
-import Form from '../components/contact/Form';
+import Form from '../components/contact_form/Form';
 import { Menu } from '../components/nav/';
 import { Layout, Spacer } from '../components/layout';
 import { MainHeading } from '../components//typography';
