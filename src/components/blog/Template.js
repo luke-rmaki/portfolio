@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Layout, Spacer } from '../layout';
+import { Layout } from '../layout';
 import BlogContent from './BlogContent';
 import { MainHeading, Paragraph } from '../typography';
 import { Menu } from '../nav';
@@ -10,10 +10,7 @@ const Template = ({ data }, props) => {
   return (
     <Layout>
       <Menu path={props.path} />
-      <Spacer heightMobile={180} />
-      <MainHeading style={{ paddingLeft: '25px' }}>
-        {frontmatter.title}
-      </MainHeading>
+      <MainHeading>{frontmatter.title}</MainHeading>
       <Paragraph
         style={{
           textAlign: 'right',

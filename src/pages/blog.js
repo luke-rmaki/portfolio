@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 // Component imports
 import { BlogList } from '../components/blog';
 import { Menu } from '../components/nav/';
-import { Layout, Spacer } from '../components/layout';
+import { Layout } from '../components/layout';
 import { MainHeading } from '../components//typography';
 import { HeadingSpring } from '../components/springs';
 
@@ -19,9 +19,8 @@ const Blog = (
   return (
     <Layout>
       <Menu path={props.path} />
-      <Spacer heightMobile={150} />
       <HeadingSpring>
-        <MainHeading style={{ paddingLeft: '25px' }}>Blog</MainHeading>
+        <MainHeading>Blog</MainHeading>
       </HeadingSpring>
       <BlogList list={edges} />
     </Layout>
