@@ -2,6 +2,7 @@
   "name": "rmaki_portfolio",
   "private": true,
   "description": "Portfolio for Luke Ruokaismaki",
+  "license": "MIT",
   "author": "Luke Ruokaismaki",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
