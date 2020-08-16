@@ -4,6 +4,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:prettier/recommended',
   ],
+  ignorePatterns: ['cypress/', '__tests__/'],
   settings: {
     react: {
       version: 'detect',

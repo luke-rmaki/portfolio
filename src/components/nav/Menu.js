@@ -116,6 +116,7 @@ const Menu = ({ path }) => {
           </li>
         </ul>
         <span
+          data-cy="menu-close"
           onClick={() => {
             setIsMenuVisible(false);
             setIsLogoVisible(true);

@@ -1,14 +1,11 @@
 import styled from 'styled-components';
-import mediaQueries from '../../utils/mediaQueries';
 
 const MainHeading = styled.h1`
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font);
   font-weight: bold;
-  font-size: 40px;
+  font-size: var(--mainheading-size);
   color: var(--main);
-  ${mediaQueries.typography} {
-    font-size: 48px;
-  }
+  padding: 150px 0 0 25px;
 `;
 
 export default MainHeading;

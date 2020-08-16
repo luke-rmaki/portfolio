@@ -2,6 +2,7 @@
   "name": "rmaki_portfolio",
   "private": true,
   "description": "Portfolio for Luke Ruokaismaki",
+  "license": "MIT",
   "author": "Luke Ruokaismaki",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
@@ -26,23 +27,22 @@
     "styled-reset": "^4.0.8"
   },
   "devDependencies": {
-    "babel-jest": "^24.9.0",
-    "babel-preset-gatsby": "^0.2.26",
+    "babel-preset-gatsby": "^0.4.2",
+    "cypress": "^4.5.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.17.0",
-    "jest": "^24.9.0",
-    "prettier": "^1.19.1",
-    "react-test-renderer": "^16.12.0"
+    "husky": "^4.2.5",
+    "prettier": "^1.19.1"
   },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "jest --watchAll"
+    "test:open": "cypress open",
+    "test:closed": "cypress run --headed"
   }
 }
