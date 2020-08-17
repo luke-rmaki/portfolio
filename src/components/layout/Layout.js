@@ -1,5 +1,7 @@
 import * as React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import styled, { createGlobalStyle } from 'styled-components';
+import { Helmet } from 'react-helmet';
 import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
@@ -44,11 +46,25 @@ const LayoutWrapper = styled.div`
   min-height: 100vh;
 `;
 
-const Layout = ({ children }) => (
-  <LayoutWrapper>
-    <GlobalStyle />
-    {children}
-  </LayoutWrapper>
-);
+const Layout = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query SiteTitle {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `);
+  return (
+    <LayoutWrapper>
+      <Helmet>
+        <title>{data.site.siteMetadata.title}</title>
+      </Helmet>
+      <GlobalStyle />
+      {children}
+    </LayoutWrapper>
+  );
+};
 
 export default Layout;

@@ -20,6 +20,8 @@ const createLetterCSS = () => {
 };
 
 const LogoWrapper = styled.div`
+  max-width: 500px;
+  margin: auto;
   svg {
     .name {
       opacity: 1;
