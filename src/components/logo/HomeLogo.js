@@ -174,7 +174,6 @@ const Logo = () => {
               fillRule: 'nonzero',
               stroke: '#d3d4f4',
               strokeWidth: '4px',
-              '-i': '1s',
             }}
           />
           <path
@@ -184,7 +183,6 @@ const Logo = () => {
               fillRule: 'nonzero',
               stroke: '#d3d4f4',
               strokeWidth: '4px',
-              '-i': '2s',
             }}
           />
           <path
@@ -194,7 +192,6 @@ const Logo = () => {
               fillRule: 'nonzero',
               stroke: '#d3d4f4',
               strokeWidth: '4px',
-              '-i': '3s',
             }}
           />
           <path
@@ -204,7 +201,6 @@ const Logo = () => {
               fillRule: 'nonzero',
               stroke: '#d3d4f4',
               strokeWidth: '4px',
-              '-i': '4s',
             }}
           />
           <path
@@ -214,7 +210,6 @@ const Logo = () => {
               fillRule: 'nonzero',
               stroke: '#d3d4f4',
               strokeWidth: '4px',
-              '-i': '5s',
             }}
           />
           <path
@@ -224,7 +219,6 @@ const Logo = () => {
               fillRule: 'nonzero',
               stroke: '#d3d4f4',
               strokeWidth: '4px',
-              '-i': '6s',
             }}
           />
           <path
@@ -234,7 +228,6 @@ const Logo = () => {
               fillRule: 'nonzero',
               stroke: '#d3d4f4',
               strokeWidth: '4px',
-              '-i': '7s',
             }}
           />
           <path
@@ -244,7 +237,6 @@ const Logo = () => {
               fillRule: 'nonzero',
               stroke: '#d3d4f4',
               strokeWidth: '4px',
-              '-i': '8s',
             }}
           />
           <path
@@ -254,7 +246,6 @@ const Logo = () => {
               fillRule: 'nonzero',
               stroke: '#d3d4f4',
               strokeWidth: '4px',
-              '-i': '9s',
             }}
           />
           <path
@@ -264,7 +255,6 @@ const Logo = () => {
               fillRule: 'nonzero',
               stroke: '#d3d4f4',
               strokeWidth: '4px',
-              '-i': '10s',
             }}
           />
           <path
@@ -274,7 +264,6 @@ const Logo = () => {
               fillRule: 'nonzero',
               stroke: '#d3d4f4',
               strokeWidth: '4px',
-              '-i': '11s',
             }}
           />
           <path
@@ -284,7 +273,6 @@ const Logo = () => {
               fillRule: 'nonzero',
               stroke: '#d3d4f4',
               strokeWidth: '4px',
-              '-i': '12s',
             }}
           />
           <path
@@ -294,7 +282,6 @@ const Logo = () => {
               fillRule: 'nonzero',
               stroke: '#d3d4f4',
               strokeWidth: '4px',
-              '-i': '13s',
             }}
           />
           <path
@@ -304,7 +291,6 @@ const Logo = () => {
               fillRule: 'nonzero',
               stroke: '#d3d4f4',
               strokeWidth: '4px',
-              '-i': '14s',
             }}
           />
           <path
@@ -314,7 +300,6 @@ const Logo = () => {
               fillRule: 'nonzero',
               stroke: '#d3d4f4',
               strokeWidth: '4px',
-              '-i': '15s',
             }}
           />
         </g>
@@ -324,7 +309,7 @@ const Logo = () => {
         >
           <g transform="matrix(1.40172,0,0,0.826641,-79.9203,52.0077)">
             <path
-              pathlength={1}
+              pathLength={1}
               d="M198.947,300L272.662,160.526L198.947,300Z"
               style={{
                 fill: 'none',
@@ -337,7 +322,7 @@ const Logo = () => {
           </g>
           <g transform="matrix(-1.40172,0,0,0.826641,581.142,167.302)">
             <path
-              pathlength={1}
+              pathLength={1}
               d="M198.947,300L272.662,160.526L198.947,300Z"
               style={{
                 fill: 'none',
@@ -355,7 +340,7 @@ const Logo = () => {
         >
           <g transform="matrix(-1.40172,0,0,0.826641,856.405,52.0077)">
             <path
-              pathlength={1}
+              pathLength={1}
               d="M198.947,300L272.662,160.526L198.947,300Z"
               style={{
                 fill: 'none',
@@ -368,7 +353,7 @@ const Logo = () => {
           </g>
           <g transform="matrix(1.40172,0,0,0.826641,195.343,167.302)">
             <path
-              pathlength={1}
+              pathLength={1}
               d="M198.947,300L272.662,160.526L198.947,300Z"
               style={{
                 fill: 'none',
