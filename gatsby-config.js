@@ -54,5 +54,14 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Luke Ruokaismaki Portfolio',
+        short_name: 'RMAKI Portfolio',
+        start_url: '/',
+        icon: 'src/assets/images/logo.png',
+      },
+    },
   ],
 };
