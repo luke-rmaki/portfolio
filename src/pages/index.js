@@ -1,33 +1,76 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
+import { motion } from 'framer-motion';
 
 // Component imports
 import { Layout } from '../components/layout';
 import { Subheading } from '../components/typography';
 import { HomeLogo } from '../components/logo/';
 import { HomeMenu } from '../components/nav';
-import { HomeMenuSpring } from '../components/springs';
 
 const Home = () => {
   return (
     <Layout>
       <HomeLogo />
       <HomeMenu>
-        <HomeMenuSpring direction="left">
-          <Subheading style={{ transform: 'rotate(90deg)' }}>
+        <motion.div
+          initial={{
+            x: '200%',
+            opacity: 0,
+            rotate: '0deg',
+          }}
+          animate={{
+            x: '0%',
+            opacity: 1,
+            rotate: '90deg',
+          }}
+          transition={{
+            delay: 1,
+            duration: 0.4,
+          }}
+        >
+          <Subheading>
             <Link to="/about">About</Link>
           </Subheading>
-        </HomeMenuSpring>
-        <HomeMenuSpring direction="down">
-          <Subheading style={{ transform: 'translateY(100px)' }}>
+        </motion.div>
+        <motion.div
+          initial={{
+            y: '-400%',
+            opacity: 0,
+          }}
+          animate={{
+            y: '100px',
+            opacity: 1,
+          }}
+          transition={{
+            delay: 1.1,
+            duration: 0.4,
+          }}
+        >
+          <Subheading>
             <Link to="/blog">Blog</Link>
           </Subheading>
-        </HomeMenuSpring>
-        <HomeMenuSpring direction="right">
-          <Subheading style={{ transform: 'rotate(270deg)' }}>
+        </motion.div>
+        <motion.div
+          initial={{
+            x: '-200%',
+            opacity: 0,
+            rotate: '0deg',
+          }}
+          animate={{
+            x: '0%',
+            opacity: 1,
+            rotate: '-90deg',
+          }}
+          transition={{
+            delay: 1.2,
+            duration: 0.4,
+          }}
+        >
+          <Subheading>
             <Link to="/contact">Contact</Link>
           </Subheading>
-        </HomeMenuSpring>
+        </motion.div>
       </HomeMenu>
     </Layout>
   );

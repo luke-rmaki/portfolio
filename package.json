@@ -6,6 +6,7 @@
   "author": "Luke Ruokaismaki",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
+    "framer-motion": "^2.6.2",
     "gatsby": "^2.20.8",
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-manifest": "^2.4.23",
@@ -42,7 +43,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test:open": "cypress open",
+    "test": "cypress open",
     "test:closed": "cypress run --headed"
   }
 }
