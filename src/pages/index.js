@@ -9,6 +9,7 @@ import { HomeLogo } from '../components/logo/';
 import { HomeMenu } from '../components/nav';
 
 const Home = () => {
+  // TODO Move menu to separate component
   return (
     <Layout>
       <HomeLogo />

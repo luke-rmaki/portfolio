@@ -4,7 +4,6 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { Link } from 'gatsby';
 
 import Logo from '../logo/Logo';
-import { LogoSpring } from '../springs';
 
 const MenuList = styled.div`
   display: flex;
@@ -90,15 +89,13 @@ const Menu = ({ path }) => {
   `);
   return (
     <>
-      <LogoSpring>
-        <Logo
-          isVisible={isLogoVisible}
-          callback={() => {
-            setIsLogoVisible(false);
-            setIsMenuVisible(true);
-          }}
-        />
-      </LogoSpring>
+      <Logo
+        isVisible={isLogoVisible}
+        callback={() => {
+          setIsLogoVisible(false);
+          setIsMenuVisible(true);
+        }}
+      />
       <MenuList isVisible={isMenuVisible}>
         <img src={data.file.publicURL} />
         <ul>
