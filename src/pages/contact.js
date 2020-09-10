@@ -9,7 +9,19 @@ import { MainHeading } from '../components//typography';
 const Contact = props => (
   <Layout>
     <Menu path={props.path} />
-    <MainHeading>Contact</MainHeading>
+    <MainHeading
+      initial={{
+        rotateX: '90deg',
+      }}
+      animate={{
+        rotateX: '0deg',
+      }}
+      transition={{
+        duration: 0.5,
+      }}
+    >
+      Contact
+    </MainHeading>
     <Form />
   </Layout>
 );
