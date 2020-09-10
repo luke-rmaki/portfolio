@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-const BlogListing = styled.div`
+const BlogListing = styled(motion.div)`
   position: relative;
   margin: 20px 0;
 

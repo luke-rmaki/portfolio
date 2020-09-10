@@ -18,7 +18,19 @@ const Blog = (
   return (
     <Layout>
       <Menu path={props.path} />
-      <MainHeading>Blog</MainHeading>
+      <MainHeading
+        initial={{
+          rotateX: '90deg',
+        }}
+        animate={{
+          rotateX: '0deg',
+        }}
+        transition={{
+          duration: 0.5,
+        }}
+      >
+        Blog
+      </MainHeading>
       <BlogList list={edges} />
     </Layout>
   );
