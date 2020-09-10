@@ -6,7 +6,6 @@ import { BlogList } from '../components/blog';
 import { Menu } from '../components/nav/';
 import { Layout } from '../components/layout';
 import { MainHeading } from '../components//typography';
-import { HeadingSpring } from '../components/springs';
 
 const Blog = (
   {
@@ -19,9 +18,7 @@ const Blog = (
   return (
     <Layout>
       <Menu path={props.path} />
-      <HeadingSpring>
-        <MainHeading>Blog</MainHeading>
-      </HeadingSpring>
+      <MainHeading>Blog</MainHeading>
       <BlogList list={edges} />
     </Layout>
   );

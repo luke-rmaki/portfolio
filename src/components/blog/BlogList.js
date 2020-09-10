@@ -4,7 +4,6 @@ import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 
 import BlogListing from './BlogListing';
-import { ContentSpring } from '../springs/about';
 import { Subheading, Paragraph } from '../typography';
 
 const BlogListWrapper = styled.div`
@@ -26,17 +25,15 @@ const BlogList = list => {
   return (
     <BlogListWrapper>
       {list.list.map(edge => (
-        <ContentSpring key={edge.node.frontmatter.path}>
-          <BlogListing data-cy="blog-post">
-            <Link to={edge.node.frontmatter.path}>
-              <Img fluid={edge.node.frontmatter.image.childImageSharp.fluid} />
-              <div id="excerpt">
-                <Subheading>{edge.node.frontmatter.title}</Subheading>
-                <Paragraph>{edge.node.excerpt}</Paragraph>
-              </div>
-            </Link>
-          </BlogListing>
-        </ContentSpring>
+        <BlogListing data-cy="blog-post" key={edge.node.frontmatter.path}>
+          <Link to={edge.node.frontmatter.path}>
+            <Img fluid={edge.node.frontmatter.image.childImageSharp.fluid} />
+            <div id="excerpt">
+              <Subheading>{edge.node.frontmatter.title}</Subheading>
+              <Paragraph>{edge.node.excerpt}</Paragraph>
+            </div>
+          </Link>
+        </BlogListing>
       ))}
     </BlogListWrapper>
   );

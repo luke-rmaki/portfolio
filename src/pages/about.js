@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 // Component imports
 import Menu from '../components/nav/Menu';
@@ -9,31 +10,67 @@ import {
 } from '../components/about_content';
 import { Layout, Flex } from '../components/layout';
 import { MainHeading, Subheading } from '../components/typography';
-import { HeadingSpring } from '../components/springs';
-import {
-  ImageSpring,
-  ContentSpring,
-  SocialMediaSpring,
-} from '../components/springs/about';
 
 const About = props => (
   <Layout>
     <Menu path={props.path} />
-    <HeadingSpring>
-      <MainHeading>About</MainHeading>
-    </HeadingSpring>
+    <MainHeading
+      initial={{
+        rotateX: '90deg',
+      }}
+      animate={{
+        rotateX: '0deg',
+      }}
+      transition={{
+        duration: 0.5,
+      }}
+    >
+      About
+    </MainHeading>
     <Flex style={{ paddingTop: '30px' }}>
-      <ContentSpring>
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{
+          delay: 0.5,
+        }}
+      >
         <AboutContent />
-      </ContentSpring>
-      <ImageSpring>
+      </motion.div>
+      <motion.div
+        initial={{
+          rotateX: '90deg',
+        }}
+        animate={{
+          rotateX: '0deg',
+        }}
+        transition={{
+          delay: 0.9,
+          duration: 0.5,
+        }}
+      >
         <AboutImage />
-      </ImageSpring>
+      </motion.div>
     </Flex>
-    <SocialMediaSpring>
+    <motion.div
+      initial={{
+        y: '1000%',
+      }}
+      animate={{
+        y: '0%',
+      }}
+      transition={{
+        delay: 0.5,
+        duration: 0.8,
+      }}
+    >
       <Subheading style={{ paddingLeft: '25px' }}>Find me on...</Subheading>
       <SocialMedia />
-    </SocialMediaSpring>
+    </motion.div>
   </Layout>
 );
 
