@@ -1,1 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="100%" height="100%" viewBox="0 0 675 675" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"><circle cx="337.25" cy="337.25" r="337.25" style="fill:#0a132d;"/><path d="M301.082,178.75l-158.5,158.5l158.5,158.5" style="fill:none;stroke:#6845e6;stroke-width:4px;"/><path d="M373.418,495.75l158.5,-158.5l-158.5,-158.5" style="fill:none;stroke:#6845e6;stroke-width:4px;"/><path d="M301.082,320.45l7.776,0l0,27.264l16.848,0l0,6.336l-24.624,0l0,-33.6Z" style="fill:#d3d4f4;fill-rule:nonzero;"/><path d="M365.066,354.05l-6.48,-9.36l-0.384,0l-6.768,0l0,9.36l-7.776,0l0,-33.6l14.544,0c2.976,0 5.56,0.496 7.752,1.488c2.192,0.992 3.88,2.4 5.064,4.224c1.184,1.824 1.776,3.984 1.776,6.48c0,2.496 -0.6,4.648 -1.8,6.456c-1.2,1.808 -2.904,3.192 -5.112,4.152l7.536,10.8l-8.352,0Zm-0.144,-21.408c0,-1.888 -0.608,-3.336 -1.824,-4.344c-1.216,-1.008 -2.992,-1.512 -5.328,-1.512l-6.336,0l0,11.712l6.336,0c2.336,0 4.112,-0.512 5.328,-1.536c1.216,-1.024 1.824,-2.464 1.824,-4.32Z" style="fill:#d3d4f4;fill-rule:nonzero;"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 373 373" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-35.5083,109.054)">
+        <text x="93.158px" y="115.789px" style="font-family:'FiraCode-Regular', 'Fira Code', monospace;font-size:144px;fill:none;stroke:rgb(211,212,244);stroke-width:7px;">L</text>
+        <text x="93.158px" y="115.789px" style="font-family:'FiraCode-Regular', 'Fira Code', monospace;font-size:144px;fill:rgb(211,212,244);">L</text>
+    </g>
+    <g transform="matrix(1,0,0,1,122.669,109.054)">
+        <text x="93.158px" y="115.789px" style="font-family:'FiraCode-Regular', 'Fira Code', monospace;font-size:144px;fill:rgb(211,212,244);stroke:rgb(211,212,244);stroke-width:7px;">R</text>
+    </g>
+    <g transform="matrix(1.62304,-0.233229,0.244237,1.69965,-495.327,-223.51)">
+        <path d="M438.149,195.789L312.118,389.474" style="fill:none;stroke:rgb(104,69,230);stroke-width:2.98px;stroke-linecap:round;stroke-miterlimit:1.5;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-195,-126)">
+        <g transform="matrix(1.40172,0,0,0.826641,-79.9203,52.0077)">
+            <path d="M198.947,300L272.662,160.526L198.947,300Z" style="fill:none;stroke:rgb(104,69,230);stroke-width:6.95px;stroke-linecap:round;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(-1.40172,0,0,0.826641,581.142,167.302)">
+            <path d="M198.947,300L272.662,160.526L198.947,300Z" style="fill:none;stroke:rgb(104,69,230);stroke-width:6.95px;stroke-linecap:round;stroke-miterlimit:1.5;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-208.537,-126)">
+        <g transform="matrix(-1.40172,0,0,0.826641,856.405,52.0077)">
+            <path d="M198.947,300L272.662,160.526L198.947,300Z" style="fill:none;stroke:rgb(104,69,230);stroke-width:6.95px;stroke-linecap:round;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(1.40172,0,0,0.826641,195.343,167.302)">
+            <path d="M198.947,300L272.662,160.526L198.947,300Z" style="fill:none;stroke:rgb(104,69,230);stroke-width:6.95px;stroke-linecap:round;stroke-miterlimit:1.5;"/>
+        </g>
+    </g>
+</svg>
