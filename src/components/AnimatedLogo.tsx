@@ -372,7 +372,7 @@ export const AnimatedLogo = () => (
             d="M198.947,300L272.662,160.526L198.947,300Z"
             style={{
               fill: `none`,
-              stroke: `var(--main)`,
+              stroke: `var(--purple)`,
               strokeWidth: `6.95px`,
               strokeLinecap: `round`,
               strokeMiterlimit: 1.5,
@@ -385,7 +385,7 @@ export const AnimatedLogo = () => (
             d="M198.947,300L272.662,160.526L198.947,300Z"
             style={{
               fill: `none`,
-              stroke: `var(--main)`,
+              stroke: `var(--purple)`,
               strokeWidth: `6.95px`,
               strokeLinecap: `round`,
               strokeMiterlimit: 1.5,
@@ -403,7 +403,7 @@ export const AnimatedLogo = () => (
             d="M198.947,300L272.662,160.526L198.947,300Z"
             style={{
               fill: `none`,
-              stroke: `var(--main)`,
+              stroke: `var(--purple)`,
               strokeWidth: `6.95px`,
               strokeLinecap: `round`,
               strokeMiterlimit: 1.5,
@@ -416,7 +416,7 @@ export const AnimatedLogo = () => (
             d="M198.947,300L272.662,160.526L198.947,300Z"
             style={{
               fill: `none`,
-              stroke: `var(--main)`,
+              stroke: `var(--purple)`,
               strokeWidth: `6.95px`,
               strokeLinecap: `round`,
               strokeMiterlimit: 1.5,
@@ -461,7 +461,7 @@ export const AnimatedLogo = () => (
           d="M438.149,195.789L312.118,389.474"
           style={{
             fill: `none`,
-            stroke: `var(--main)`,
+            stroke: `var(--purple)`,
             strokeWidth: `2.98px`,
             strokeLinecap: `round`,
             strokeMiterlimit: 1.5,

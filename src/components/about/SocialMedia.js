@@ -5,49 +5,46 @@ import styled from 'styled-components';
 import { createIconLinkObjectArray } from '../../utils';
 import { SubHeading } from '..';
 
-const SocialMedia = () => {
-  const data = useStaticQuery(graphql`
-    query SocialMediaQuery {
-      mdx(frontmatter: { name: { eq: "about" } }) {
-        frontmatter {
-          links
-        }
-      }
-      allFile(filter: { sourceInstanceName: { eq: "icons" } }) {
-        edges {
-          node {
-            publicURL
-            name
-          }
-        }
-      }
-    }
-  `);
-  let { links } = data.mdx.frontmatter;
-  links = links.split(`,`);
-  const { edges: icons } = data.allFile;
+const SocialMedia = () => (
+  // const data = useStaticQuery(graphql`
+  //   query SocialMediaQuery {
+  //     mdx(frontmatter: { name: { eq: "about" } }) {
+  //       frontmatter {
+  //         links
+  //       }
+  //     }
+  //     allFile(filter: { sourceInstanceName: { eq: "icons" } }) {
+  //       edges {
+  //         node {
+  //           publicURL
+  //           name
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
+  // let { links } = data.mdx.frontmatter;
+  // links = links.split(`,`);
+  // const { edges: icons } = data.allFile;
 
-  const dataArray = createIconLinkObjectArray(icons, links);
+  // const dataArray = createIconLinkObjectArray(icons, links);
 
-  return (
-    <SocialMediaWrapper>
-      <SubHeading>Find me on...</SubHeading>
-      <div>
-        {dataArray.map((icon) => (
-          <a
-            key={icon.name}
-            target="_blank"
-            rel="noopener noreferrer"
-            href={icon.link}
-          >
-            <Icon src={icon.iconURL} />
-          </a>
-        ))}
-      </div>
-    </SocialMediaWrapper>
-  );
-};
-
+  <SocialMediaWrapper>
+    <SubHeading>Find me on...</SubHeading>
+    <div>
+      {/* {dataArray.map((icon) => (
+        <a
+          key={icon.name}
+          target="_blank"
+          rel="noopener noreferrer"
+          href={icon.link}
+        >
+          <Icon src={icon.iconURL} />
+        </a>
+      ))} */}
+    </div>
+  </SocialMediaWrapper>
+);
 export default SocialMedia;
 
 const SocialMediaWrapper = styled.aside`

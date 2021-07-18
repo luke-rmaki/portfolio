@@ -10,7 +10,7 @@ export const MainHeading = styled.div<Props>`
   font-weight: bold;
   font-size: var(--mainheading-size);
   color: ${(props) => (props.color ? `var(--${props.color})` : `var(--white)`)};
-  padding: 150px 0 0 25px;
+  padding: 50px 0 0 25px;
 `;
 
 export const SubHeading = styled.div<Props>`

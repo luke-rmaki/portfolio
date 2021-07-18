@@ -16,10 +16,10 @@ const ImgWrapper = styled.div`
   }
 `;
 
-const Image = () => {
+export const Image = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "profile.jpg" }) {
+      file(relativePath: { eq: "about.jpg" }) {
         childImageSharp {
           fluid {
             base64
@@ -34,9 +34,10 @@ const Image = () => {
   `);
   return (
     <ImgWrapper>
-      <Img fluid={data.file.childImageSharp.fluid} alt="Profile picture" />
+      <Img
+        fluid={data.file.childImageSharp.fluid}
+        alt="Luke holding a drink at a party"
+      />
     </ImgWrapper>
   );
 };
-
-export default Image;
