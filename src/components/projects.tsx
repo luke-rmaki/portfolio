@@ -76,4 +76,10 @@ const StyledProjects = styled.section`
       text-decoration: none;
     }
   }
+
+  @media (min-width: 1000px) {
+    h2 {
+      padding: 25px;
+    }
+  }
 `;

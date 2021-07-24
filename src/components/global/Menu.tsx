@@ -100,7 +100,7 @@ export const Menu = ({ path }) => {
       [states.MOBILE_DISPLAY]: {
         on: {
           [events.CLOSE_CLICK]: states.BUTTON_DISPLAY,
-          [events.TO_DESKTOP_WIDTH]: states.DESKTOP_DISPLAY,
+          // [events.TO_DESKTOP_WIDTH]: states.DESKTOP_DISPLAY,
         },
       },
       [states.BUTTON_HIDDEN]: {
@@ -117,13 +117,13 @@ export const Menu = ({ path }) => {
       [states.DESKTOP_DISPLAY]: {
         on: {
           [events.SCROLL_DOWN]: states.DESKTOP_HIDDEN,
-          [events.TO_MOBILE_WIDTH]: states.MOBILE_DISPLAY,
+          // [events.TO_MOBILE_WIDTH]: states.MOBILE_DISPLAY,
         },
       },
       [states.DESKTOP_HIDDEN]: {
         on: {
           [events.SCROLL_UP]: states.DESKTOP_DISPLAY,
-          [events.TO_MOBILE_WIDTH]: states.BUTTON_DISPLAY,
+          // [events.TO_MOBILE_WIDTH]: states.BUTTON_DISPLAY,
         },
       },
     },
@@ -152,27 +152,27 @@ export const Menu = ({ path }) => {
     // use passive option to optmise scrolling
     window.addEventListener(`scroll`, handleScroll, { passive: true });
 
-    // Window Size
-    function handleResize(entries: any) {
-      const { width }: { width: number } = entries[0].contentRect;
-      if (width > 1000) {
-        send(events.TO_DESKTOP_WIDTH);
-      } else {
-        send(events.TO_MOBILE_WIDTH);
-      }
-    }
-    const resizeObserver = new ResizeObserver(handleResize);
-    const body = document.querySelector(`body`);
-    if (body) {
-      resizeObserver.observe(body);
-    }
+    // // Window Size
+    // function handleResize(entries: any) {
+    //   const { width }: { width: number } = entries[0].contentRect;
+    //   if (width > 1000) {
+    //     send(events.TO_DESKTOP_WIDTH);
+    //   } else {
+    //     send(events.TO_MOBILE_WIDTH);
+    //   }
+    // }
+    // const resizeObserver = new ResizeObserver(handleResize);
+    // const body = document.querySelector(`body`);
+    // if (body) {
+    //   resizeObserver.observe(body);
+    // }
 
     // remove event listener on unmount
     return () => {
       window.removeEventListener(`scroll`, handleScroll);
-      if (body) {
-        resizeObserver.unobserve(body);
-      }
+      // if (body) {
+      //   resizeObserver.unobserve(body);
+      // }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

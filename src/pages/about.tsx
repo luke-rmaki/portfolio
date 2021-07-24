@@ -28,6 +28,7 @@ const About = (props) => {
           <MDXRenderer>{content.mdx.body}</MDXRenderer>
         </article>
         <Projects />
+        <hr />
         <SocialMedia />
       </StyledAbout>
     </Layout>
@@ -36,7 +37,7 @@ const About = (props) => {
 
 export default About;
 
-const StyledAbout = styled.article`
+const StyledAbout = styled.main`
   article {
     padding: 0;
     display: grid;
@@ -50,7 +51,15 @@ const StyledAbout = styled.article`
 
     [data-img] {
       grid-column: 1 / 3;
-      width: 100vw;
+    }
+
+    @media (min-width: 1000px) {
+      [data-img] {
+        grid-column: 2 / 3;
+        justify-self: end;
+        align-self: start;
+        grid-row: 2 / 5;
+      }
     }
 
     blockquote {
@@ -115,6 +124,23 @@ const StyledAbout = styled.article`
       font-style: italic;
       font-size: var(--subheading-size);
       color: var(--purple);
+    }
+  }
+
+  hr {
+    width: 100vw;
+    color: var(--accent);
+    margin: 100px 0;
+  }
+
+  @media (min-width: 1000px) {
+    article {
+      grid-template-columns: 50% 50%;
+
+      p,
+      blockquote {
+        grid-column: 1 / 2;
+      }
     }
   }
 `;

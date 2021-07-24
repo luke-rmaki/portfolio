@@ -4,12 +4,9 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 const ImgWrapper = styled.div`
   margin: 20px auto 0px auto;
-  width: 70%;
 
-  img {
-    @media screen and (min-width: 800px) {
-      border-radius: 20px;
-    }
+  @media (min-width: 1000px) {
+    margin: 0;
   }
 `;
 
