@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import { StaticImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
 
 import BlogListing from './BlogListing';
@@ -26,7 +26,9 @@ const BlogList = (list) => (
     {list.list.map((edge) => (
       <BlogListing key={edge.node.frontmatter.path} data-cy="blog-post">
         <Link to={edge.node.frontmatter.path}>
-          <Img fluid={edge.node.frontmatter.image.childImageSharp.fluid} />
+          <StaticImage
+            src={edge.node.frontmatter.image.childImageSharp.fluid}
+          />
           <div id="excerpt">
             <SubHeading>{edge.node.frontmatter.title}</SubHeading>
             <Paragraph>{edge.node.excerpt}</Paragraph>

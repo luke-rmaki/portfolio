@@ -37,7 +37,7 @@ type Props = {
   action: () => void;
   state: string;
 };
-export const Logo = (props: Props) => {
+export const LogoButton = (props: Props) => {
   const { action, state } = props;
   const data = useStaticQuery(graphql`
     query LogoQuery {

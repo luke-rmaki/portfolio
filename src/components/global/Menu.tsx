@@ -2,19 +2,18 @@ import React, { useReducer, useEffect, useRef, MutableRefObject } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-import { Logo } from './Logo';
+import { LogoButton } from './LogoButton';
 
 type StyledProps = {
   state: string;
 };
 const MenuWrapper = styled.nav<StyledProps>`
-  height: 100vh;
+  height: ${(props) => (props.state === `MOBILE_DISPLAY` ? `100vh` : `0`)};
   width: 100vw;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: absolute;
   z-index: var(--level-three);
 
   #logo {
@@ -27,6 +26,9 @@ const MenuWrapper = styled.nav<StyledProps>`
   }
 
   .modal {
+    position: fixed;
+    top: 0px;
+    left: 0px;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -36,6 +38,7 @@ const MenuWrapper = styled.nav<StyledProps>`
     justify-content: center;
     transition: all 0.2s ease-in;
     transition-delay: 0.5s;
+    z-index: var(--level-three);
 
     ul {
       flex: 1 0;
@@ -102,13 +105,11 @@ export const Menu = ({ path }) => {
       },
       [states.BUTTON_HIDDEN]: {
         on: {
-          [events.SCROLL_UP]: states.BUTTON_DISPLAY,
           [events.TO_DESKTOP_WIDTH]: states.DESKTOP_DISPLAY,
         },
       },
       [states.BUTTON_DISPLAY]: {
         on: {
-          [events.SCROLL_DOWN]: states.BUTTON_HIDDEN,
           [events.BUTTON_CLICK]: states.MOBILE_DISPLAY,
           [events.TO_DESKTOP_WIDTH]: states.DESKTOP_DISPLAY,
         },
@@ -139,6 +140,7 @@ export const Menu = ({ path }) => {
   const previousScrollPosition: MutableRefObject<number> = useRef(0);
 
   useEffect(() => {
+    console.log(state);
     function handleScroll() {
       const currentScroll = window.scrollY;
       if (previousScrollPosition.current < currentScroll) {
@@ -168,12 +170,13 @@ export const Menu = ({ path }) => {
 
     // remove event listener on unmount
     return () => {
-      window.removeEventListener(`scroll`, handleScroll);
+      // window.removeEventListener(`scroll`, handleScroll);
       if (body) {
         resizeObserver.unobserve(body);
       }
     };
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
@@ -203,7 +206,7 @@ export const Menu = ({ path }) => {
             Close
           </button>
         </div>
-        <Logo
+        <LogoButton
           state={state}
           action={() => {
             send(events.BUTTON_CLICK);

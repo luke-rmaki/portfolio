@@ -1,3 +1,3 @@
 export { Layout } from './Layout';
-export { Logo } from './Logo';
+export { LogoButton } from './LogoButton';
 export { Menu } from './Menu';
