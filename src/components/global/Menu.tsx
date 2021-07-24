@@ -140,7 +140,6 @@ export const Menu = ({ path }) => {
   const previousScrollPosition: MutableRefObject<number> = useRef(0);
 
   useEffect(() => {
-    console.log(state);
     function handleScroll() {
       const currentScroll = window.scrollY;
       if (previousScrollPosition.current < currentScroll) {
@@ -170,7 +169,7 @@ export const Menu = ({ path }) => {
 
     // remove event listener on unmount
     return () => {
-      // window.removeEventListener(`scroll`, handleScroll);
+      window.removeEventListener(`scroll`, handleScroll);
       if (body) {
         resizeObserver.unobserve(body);
       }

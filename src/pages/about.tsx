@@ -7,6 +7,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { SocialMedia } from '../components/contact/SocialMedia';
 import { Layout, Menu } from '../components/global';
 import { MainHeading } from '../components';
+import { Projects } from '../components/projects';
 
 const About = (props) => {
   const { path }: { path: string } = props;
@@ -26,6 +27,7 @@ const About = (props) => {
         <article>
           <MDXRenderer>{content.mdx.body}</MDXRenderer>
         </article>
+        <Projects />
         <SocialMedia />
       </StyledAbout>
     </Layout>

@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "name": "This Site",
+      "description": "The very site you're looking at",
+      "tech": ["React", "Gatsby", "Styled Components", "Typescript"],
+      "link": "https://github.com/luke-rmaki/portfolio"
+    },
+    {
+      "name": "Mongo DB Backup Script",
+      "description": "A script that uses node-cron to run a backup of a Mongo DB database",
+      "tech": ["MongoDB", "Typescript", "NodeJS", "Node-Cron"],
+      "link": "https://github.com/luke-rmaki/node_mongodb_backup"
+    }
+  ]
+}

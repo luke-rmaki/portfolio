@@ -5,7 +5,7 @@ interface Props {
   hover?: string;
 }
 
-export const MainHeading = styled.div<Props>`
+export const MainHeading = styled.h1<Props>`
   font-family: var(--font);
   font-weight: bold;
   font-size: var(--mainheading-size);
@@ -13,7 +13,7 @@ export const MainHeading = styled.div<Props>`
   padding: 50px 0 0 25px;
 `;
 
-export const SubHeading = styled.div<Props>`
+export const SubHeading = styled.h2<Props>`
   font-family: var(--font);
   font-weight: normal;
   font-style: italic;
