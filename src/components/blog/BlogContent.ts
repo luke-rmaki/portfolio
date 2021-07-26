@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-const BlogContent = styled.div`
+const BlogContent = styled.article`
+  padding-top: 50px;
   * {
     padding: 0 25px;
 
@@ -8,6 +9,7 @@ const BlogContent = styled.div`
       padding: 0 100px;
     }
   }
+
   h2 {
     font-family: var(--font);
     font-weight: normal;

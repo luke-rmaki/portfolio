@@ -12,7 +12,7 @@ export const Projects = () => (
           <h3>{project.name}</h3>
           <p>{project.description}</p>
           <h4>Tech:</h4>
-          <ul>
+          <ul className="bullet">
             {project.tech.map((tech) => (
               <li key={tech}>{tech}</li>
             ))}
@@ -64,10 +64,6 @@ const StyledProjects = styled.section`
       li {
         margin-left: 20px;
         padding: 10px 0;
-
-        &::before {
-          content: '=> ';
-        }
       }
     }
 

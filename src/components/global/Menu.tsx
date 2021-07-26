@@ -152,6 +152,12 @@ export const Menu = ({ path }) => {
     // use passive option to optmise scrolling
     window.addEventListener(`scroll`, handleScroll, { passive: true });
 
+    if (state === `MOBILE_DISPLAY`) {
+      document.body.style.overflowY = `hidden`;
+    } else {
+      document.body.style.overflowY = `auto`;
+    }
+
     // // Window Size
     // function handleResize(entries: any) {
     //   const { width }: { width: number } = entries[0].contentRect;
@@ -175,7 +181,7 @@ export const Menu = ({ path }) => {
       // }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [state]);
 
   return (
     <>
@@ -199,7 +205,6 @@ export const Menu = ({ path }) => {
             type="button"
             onClick={() => {
               send(events.CLOSE_CLICK);
-              document.body.style.overflowY = `auto`;
             }}
           >
             Close
@@ -209,7 +214,6 @@ export const Menu = ({ path }) => {
           state={state}
           action={() => {
             send(events.BUTTON_CLICK);
-            document.body.style.overflowY = `hidden`;
           }}
         />
       </MenuWrapper>

@@ -1,0 +1,62 @@
+---
+path: "/blog/arrow-functions"
+date: "2021-07-24"
+title: "Arrow Functions"
+image: "img.png"
+---
+
+# Arrow Functions
+
+# JavaScript ES6: Arrow Functions
+
+ES6 Arrow Functions, also known as Fat Arrows, are one of the simpler new features in ES6. They provide two benefits: more concise syntax, and lexical scoping of this. Let’s take a look at the syntax first.
+
+### Arrow Function Syntax
+
+Arrow functions provide a simpler and more concise way to define functions. Take the following callback function as an example:
+
+![https://cdn-images-1.medium.com/max/2000/1*DBg85yAZexDLyxr6G1rAiQ.png](https://cdn-images-1.medium.com/max/2000/1*DBg85yAZexDLyxr6G1rAiQ.png)
+
+That is a lot of code for a very simple task. Let’s rewrite this function, substituting the anonymous callback with an **arrow function**:
+
+![https://cdn-images-1.medium.com/max/2000/1*x2rDZDudUCsc92RalaV70Q.png](https://cdn-images-1.medium.com/max/2000/1*x2rDZDudUCsc92RalaV70Q.png)
+
+_Using an arrow function saved us one line of code._
+
+As you can see in the above example, **arrow functions** use **=>** to declare a function. This example highlights one of best uses for **arrow functions**, anonymous callbacks. We no longer need to write out the _function_ keyword when declaring an anonymous function.
+
+Let’s take a look at another example. Take the following function:
+
+![https://cdn-images-1.medium.com/max/2000/1*FBS0GcfuBtmj8g-8utTRUw.png](https://cdn-images-1.medium.com/max/2000/1*FBS0GcfuBtmj8g-8utTRUw.png)
+
+Here is how we could rewrite it using arrow functions:
+
+![https://cdn-images-1.medium.com/max/2000/1*AANR7FquEonzKza4DVpVCQ.png](https://cdn-images-1.medium.com/max/2000/1*AANR7FquEonzKza4DVpVCQ.png)
+
+This example highlights an important point regarding returning from **arrow functions**. To understand this point, we need to understand the difference between “expressions” and “statements”. Basically speaking, an “expression” creates a value, while a “statement” performs an action. In the above example, x + y is an expression as it creates a value. So if an **arrow function** contains a single expression, like the one above, the expression is automatically returned. However, if the function includes multiple expressions or statements, we need to include the curly braces ({}) and explicitly call **return** on the value we want to return.
+
+Let’s look at writing an **arrow function** with only one parameter:
+
+![https://cdn-images-1.medium.com/max/2000/1*_hIg_H1fr3EhmFv8nWoUYA.png](https://cdn-images-1.medium.com/max/2000/1*_hIg_H1fr3EhmFv8nWoUYA.png)
+
+As you can see, if we only have one parameter we can omit the parentheses.
+
+Let’s quickly review the various different ways we can write arrow functions:
+
+![https://cdn-images-1.medium.com/max/2000/1*PJWWuv52VhWvDThtItQvBA.png](https://cdn-images-1.medium.com/max/2000/1*PJWWuv52VhWvDThtItQvBA.png)
+
+Now let’s look at how **arrow functions** affect the _this_ keyword.
+
+### Lexical scoping of this
+
+In the context of _functions_ and _this_, lexical scoping basically means that a function gets it’s value of _this_ from the surrounding code (the actual definition is much more complicated and involves how the JavaScript engine compiles code at run-time).
+
+Normal functions get their value of _this_ from the context in which they are **called**. This means that if we want to access the _this_ keyword from the context in which the function was **defined**, we would have to bind _this_ to the function using the _.bind(this)_ method.
+
+**Arrow functions** get their value of _this_ from the context in which they are **defined**. _This_ cannot be bound to an **arrow function**.
+
+Don’t worry if this doesn’t make much sense, it probably just means that you haven’t had to deal with lexical scoping yet. But if you run into problems using _this_, or see code that uses the _.bind(this)_ method, or you see _var that = this_ then it’s likely that you are running into problems with the scoping of _this_. In that case, using **arrow functions** may solve your problems.
+
+In summary, using **arrow functions** can help us write cleaner, more concise code. Hopefully this article has also helped you to understand how **arrow functions** work with the _this_ keyword.
+
+I love using arrow functions. But just remember that not every function can or should be written as an **arrow function**. An example of this is when declaring methods for an object, which we’ll look at in the next article.

@@ -2,31 +2,32 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { Layout, Menu } from '../global';
+import { Layout } from '../global/Layout';
+import { Menu } from '../global/Menu';
 import BlogContent from './BlogContent';
 import { MainHeading, Paragraph } from '..';
 
-const Template = ({ data }, props) => {
-  const { frontmatter, post } = data.mdx;
+const Template = (props) => {
+  const {
+    data: { mdx },
+    path,
+  } = props;
   return (
-    <Layout>
-      <Menu path={props.path} />
-      <MainHeading>{frontmatter.title}</MainHeading>
+    <Layout title={mdx.frontmatter.title}>
+      <Menu path={path} />
+      <MainHeading>{mdx.frontmatter.title}</MainHeading>
       <Paragraph
         style={{
           textAlign: `right`,
-          paddingRight: `15px`,
+          paddingRight: `20px`,
           fontStyle: `italic`,
+          marginTop: `20px`,
         }}
       >
-        {frontmatter.date}
+        {mdx.frontmatter.date}
       </Paragraph>
-      <BlogContent
-        style={{
-          paddingTop: `50px`,
-        }}
-      >
-        <MDXRenderer>{post.body}</MDXRenderer>
+      <BlogContent>
+        <MDXRenderer>{mdx.body}</MDXRenderer>
       </BlogContent>
     </Layout>
   );
@@ -35,7 +36,7 @@ const Template = ({ data }, props) => {
 export default Template;
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query ($path: String!) {
     mdx(frontmatter: { path: { eq: $path } }) {
       body
       frontmatter {

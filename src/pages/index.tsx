@@ -2,9 +2,9 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 // Component imports
-import { Layout } from '../components/global';
+import { Layout } from '../components/global/Layout';
 import { AnimatedLogo } from '../components';
-import { HomeLink } from '../components/buttons';
+import { HomeLink } from '../components/buttons/HomeLink';
 
 const HomeWrapper = styled.main`
   text-align: center;

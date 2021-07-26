@@ -6099,6 +6099,11 @@ eslint-config-rmaki@1.0.5:
   resolved "https://registry.yarnpkg.com/eslint-config-rmaki/-/eslint-config-rmaki-1.0.5.tgz#92bdaf22664a4f4b9195d5d3ee684600fe449091"
   integrity sha512-ZoFJhIVc5CZ9lDaOXXjtZhXctkYEe13QGw9tl7B5yn4ywwjJKR6cNeMVHnoJ3GyBlbmP1vFg9bT7HeRTziiMQw==
 
+eslint-import-resolver-alias@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/eslint-import-resolver-alias/-/eslint-import-resolver-alias-1.1.2.tgz#297062890e31e4d6651eb5eba9534e1f6e68fc97"
+  integrity sha512-WdviM1Eu834zsfjHtcGHtGfcu+F30Od3V7I9Fi57uhBEwPkjDcii7/yW8jAT+gOhn4P/vOxxNAXbFAKsrrc15w==
+
 eslint-import-resolver-node@^0.3.4:
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.4.tgz#85ffa81942c25012d8231096ddf679c03042c717"
@@ -6158,7 +6163,7 @@ eslint-plugin-html@^6.1.0:
   dependencies:
     htmlparser2 "^6.0.1"
 
-eslint-plugin-import@^2.22.0:
+eslint-plugin-import@^2.22.0, eslint-plugin-import@^2.23.4:
   version "2.23.4"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.23.4.tgz#8dceb1ed6b73e46e50ec9a5bb2411b645e7d3d97"
   integrity sha512-6/wP8zZRsnQFiR3iaPFgh5ImVRM1WN5NUWfTIRqwOdeiGJlBcSk82o1FEVq8yXmy4lkIzTo7YhHCIxlU/2HyEQ==

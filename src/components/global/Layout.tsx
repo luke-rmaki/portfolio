@@ -56,6 +56,20 @@ const GlobalStyle = createGlobalStyle`
       color: var(--black);
     }
   }
+
+  ul.bullet {
+    li {
+      list-style-type: none;
+      &::before {
+        content: "=> ";
+      }
+    }
+  }
+
+  hr {
+    width: 100vw;
+    color: var(--accent);
+  }
 }
 
   /* Scrollbar styled */
@@ -64,27 +78,29 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body::-webkit-scrollbar-track {
-    background: var(----neutral);
+    background: var(----purple);
   }
 
   body::-webkit-scrollbar-thumb {
     background-color: var(--accent) ;
     border-radius: 6px;
-    border: 3px solid var(----neutral);
+    border: 3px solid var(----purple);
   }
 
   body {
     scrollbar-width: thin;
-    scrollbar-color: var(--accent) var(--neutral);
+    scrollbar-color: var(--accent) var(--purple);
   }
 
   `;
 
-export const Layout = (props) => {
-  const {
-    children,
-    title,
-  }: { children: React.ReactNode; title: string } = props;
+type Props = {
+  children: React.ReactNode;
+  title: string;
+};
+export const Layout = (props: Props) => {
+  const { children, title } = props;
+
   return (
     <>
       <Helmet>

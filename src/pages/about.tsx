@@ -5,7 +5,8 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 // Component imports
 import { SocialMedia } from '../components/contact/SocialMedia';
-import { Layout, Menu } from '../components/global';
+import { Layout } from '../components/global/Layout';
+import { Menu } from '../components/global/Menu';
 import { MainHeading } from '../components';
 import { Projects } from '../components/projects';
 
@@ -128,8 +129,6 @@ const StyledAbout = styled.main`
   }
 
   hr {
-    width: 100vw;
-    color: var(--accent);
     margin: 100px 0;
   }
 

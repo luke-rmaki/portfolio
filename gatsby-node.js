@@ -3,12 +3,12 @@ const path = require(`path`);
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
-  const blogPostTemplate = path.resolve(`src/components/blog/Template.js`);
+  const blogPostTemplate = path.resolve(`src/components/blog/Template.tsx`);
 
   const result = await graphql(`
     {
       allMdx(
-        filter: { frontmatter: { title: { ne: "about" }, path: { ne: null } } }
+        filter: { frontmatter: { type: { ne: "page" }, path: { ne: null } } }
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
       ) {
@@ -37,3 +37,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
   });
 };
+
+// exports.onCreateWebpackConfig({
+//   resolve: {
+//     alias: [
+//       [`@utils`, `./src/utils`],
+//       [`@global`, `./src/components/global`],
+//     ],
+//   },
+// });
