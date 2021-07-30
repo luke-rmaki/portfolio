@@ -5,6 +5,7 @@
   "license": "MIT",
   "author": "Luke Ruokaismaki",
   "dependencies": {
+    "@deckdeckgo/highlight-code": "^3.3.1",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "babel-plugin-styled-components": "^1.10.6",
@@ -17,9 +18,11 @@
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-sharp": "^3.9.0",
     "gatsby-plugin-styled-components": "^3.1.14",
+    "gatsby-remark-highlight-code": "^3.0.1",
     "gatsby-remark-images": "^3.2.2",
     "gatsby-remark-relative-images": "^0.3.0",
     "gatsby-source-filesystem": "^3.9.0",
+    "gatsby-transformer-remark": "^4.7.0",
     "gatsby-transformer-sharp": "^3.9.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -28,6 +31,7 @@
     "styled-reset": "^4.0.8"
   },
   "devDependencies": {
+    "@mdx-js/loader": "^1.6.22",
     "@types/node": "^14.14.10",
     "@types/styled-components": "^5.1.9",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
@@ -49,6 +53,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
+    "loader-utils": "^2.0.0",
     "prettier": "^2.1.1",
     "typescript": "^4.0.3"
   },

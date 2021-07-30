@@ -22,20 +22,8 @@ export const BlogPreview = (props: Props) => {
           <SubHeading>{edge.node.frontmatter.title}</SubHeading>
           <div className="sub">
             <svg width="100%" height="30px">
-              <line
-                x1="50%"
-                x2="50%"
-                y1="0"
-                y2="90%"
-                style={{ stroke: `var(--accent)`, strokeWidth: 1 }}
-              />
-              <line
-                x1="50%"
-                x2="95%"
-                y1="90%"
-                y2="90%"
-                style={{ stroke: `var(--accent)`, strokeWidth: 1 }}
-              />
+              <line x1="50%" x2="50%" y1="0" y2="90%" />
+              <line x1="50%" x2="95%" y1="90%" y2="90%" />
             </svg>
             <span>{edge.node.frontmatter?.date}</span>
           </div>
@@ -54,6 +42,7 @@ export const BlogPreview = (props: Props) => {
 const StyledBlogPreview = styled.article`
   position: relative;
   margin: 50px 0;
+  transition: 0.2s all ease-in;
 
   a {
     text-decoration: none;
@@ -89,6 +78,13 @@ const StyledBlogPreview = styled.article`
     span {
       color: var(--white);
     }
+
+    svg {
+      line {
+        stroke: var(--accent);
+        stroke-width: 1;
+      }
+    }
   }
 
   p {
@@ -101,5 +97,19 @@ const StyledBlogPreview = styled.article`
 
   section {
     margin-bottom: 25px;
+  }
+
+  &:hover {
+    background: var(--accent);
+
+    h2,
+    p,
+    span {
+      color: var(--black);
+    }
+
+    svg > line {
+      stroke: var(--black);
+    }
   }
 `;

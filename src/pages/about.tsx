@@ -20,6 +20,7 @@ const About = (props) => {
       }
     }
   `);
+
   return (
     <Layout title="About">
       <Menu path={path} />

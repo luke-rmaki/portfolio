@@ -51,6 +51,12 @@ module.exports = {
               showCaptions: true,
             },
           },
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              theme: `one-dark`,
+            },
+          },
         ],
       },
     },

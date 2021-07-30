@@ -3,6 +3,7 @@ export type Frontmatter = {
   path?: string;
   title?: string;
   image?: any;
+  lastUpdated?: string;
 };
 
 export type BlogOverviewData = {

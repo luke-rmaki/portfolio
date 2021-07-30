@@ -2,52 +2,56 @@
 path: "/blog/arrow-functions"
 date: "2021-07-24"
 title: "Arrow Functions"
-image: "img.png"
+image: "images/preview.png"
 ---
 
-# Arrow Functions
+Arrow Functions provide two main benefits or features compared to regular function definitions: more concise syntax, and lexical scoping of this. Let's take a quick look at both.
 
-# JavaScript ES6: Arrow Functions
+## Arrow Function Syntax
 
-ES6 Arrow Functions, also known as Fat Arrows, are one of the simpler new features in ES6. They provide two benefits: more concise syntax, and lexical scoping of this. Let’s take a look at the syntax first.
+Arrow functions provide a more concise way to define functions. Arrow functions are especially useful when declaring a callback function. Take a look at the following comparison:
 
-### Arrow Function Syntax
+```javascript
+// Traditional function definition
+setTimeout(function () {
+  console.log("I will print after 100ms");
+}, 100);
 
-Arrow functions provide a simpler and more concise way to define functions. Take the following callback function as an example:
+// Arrow function definition
+setTimeout(() => {
+  console.log("I will also print after 100ms");
+}, 100);
+```
 
-![https://cdn-images-1.medium.com/max/2000/1*DBg85yAZexDLyxr6G1rAiQ.png](https://cdn-images-1.medium.com/max/2000/1*DBg85yAZexDLyxr6G1rAiQ.png)
+### Syntax variations:
 
-That is a lot of code for a very simple task. Let’s rewrite this function, substituting the anonymous callback with an **arrow function**:
-
-![https://cdn-images-1.medium.com/max/2000/1*x2rDZDudUCsc92RalaV70Q.png](https://cdn-images-1.medium.com/max/2000/1*x2rDZDudUCsc92RalaV70Q.png)
-
-_Using an arrow function saved us one line of code._
-
-As you can see in the above example, **arrow functions** use **=>** to declare a function. This example highlights one of best uses for **arrow functions**, anonymous callbacks. We no longer need to write out the _function_ keyword when declaring an anonymous function.
+> As you can see in the above example, **arrow functions** use **=>** to declare a function. This example highlights one of best uses for **arrow functions**, anonymous callbacks. We no longer need to write out the _function_ keyword when declaring an anonymous function.
 
 Let’s take a look at another example. Take the following function:
 
-![https://cdn-images-1.medium.com/max/2000/1*FBS0GcfuBtmj8g-8utTRUw.png](https://cdn-images-1.medium.com/max/2000/1*FBS0GcfuBtmj8g-8utTRUw.png)
+<!-- ![https://cdn-images-1.medium.com/max/2000/1*FBS0GcfuBtmj8g-8utTRUw.png](https://cdn-images-1.medium.com/max/2000/1*FBS0GcfuBtmj8g-8utTRUw.png) -->
 
 Here is how we could rewrite it using arrow functions:
 
-![https://cdn-images-1.medium.com/max/2000/1*AANR7FquEonzKza4DVpVCQ.png](https://cdn-images-1.medium.com/max/2000/1*AANR7FquEonzKza4DVpVCQ.png)
+<!-- ![https://cdn-images-1.medium.com/max/2000/1*AANR7FquEonzKza4DVpVCQ.png](https://cdn-images-1.medium.com/max/2000/1*AANR7FquEonzKza4DVpVCQ.png) -->
 
 This example highlights an important point regarding returning from **arrow functions**. To understand this point, we need to understand the difference between “expressions” and “statements”. Basically speaking, an “expression” creates a value, while a “statement” performs an action. In the above example, x + y is an expression as it creates a value. So if an **arrow function** contains a single expression, like the one above, the expression is automatically returned. However, if the function includes multiple expressions or statements, we need to include the curly braces ({}) and explicitly call **return** on the value we want to return.
 
 Let’s look at writing an **arrow function** with only one parameter:
 
-![https://cdn-images-1.medium.com/max/2000/1*_hIg_H1fr3EhmFv8nWoUYA.png](https://cdn-images-1.medium.com/max/2000/1*_hIg_H1fr3EhmFv8nWoUYA.png)
+<!-- ![https://cdn-images-1.medium.com/max/2000/1*_hIg_H1fr3EhmFv8nWoUYA.png](https://cdn-images-1.medium.com/max/2000/1*_hIg_H1fr3EhmFv8nWoUYA.png) -->
 
 As you can see, if we only have one parameter we can omit the parentheses.
 
 Let’s quickly review the various different ways we can write arrow functions:
 
-![https://cdn-images-1.medium.com/max/2000/1*PJWWuv52VhWvDThtItQvBA.png](https://cdn-images-1.medium.com/max/2000/1*PJWWuv52VhWvDThtItQvBA.png)
+<!-- ![https://cdn-images-1.medium.com/max/2000/1*PJWWuv52VhWvDThtItQvBA.png](https://cdn-images-1.medium.com/max/2000/1*PJWWuv52VhWvDThtItQvBA.png) -->
 
 Now let’s look at how **arrow functions** affect the _this_ keyword.
 
-### Lexical scoping of this
+---
+
+## Lexical scoping of this
 
 In the context of _functions_ and _this_, lexical scoping basically means that a function gets it’s value of _this_ from the surrounding code (the actual definition is much more complicated and involves how the JavaScript engine compiles code at run-time).
 

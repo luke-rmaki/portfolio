@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 
 import { Layout } from '../global/Layout';
 import { Menu } from '../global/Menu';
@@ -12,6 +13,9 @@ const Template = (props) => {
     data: { mdx },
     path,
   } = props;
+
+  deckDeckGoHighlightElement();
+
   return (
     <Layout title={mdx.frontmatter.title}>
       <Menu path={path} />
