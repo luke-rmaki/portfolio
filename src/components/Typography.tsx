@@ -41,6 +41,11 @@ export const Paragraph = styled.p<Props>`
   font-family: var(--font);
   font-size: var(--paragraph-size);
   color: var(--white);
+  line-height: 1.7rem;
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 export const Highlight = styled.span<Props>`

@@ -70,7 +70,21 @@ const GlobalStyle = createGlobalStyle`
     width: 100vw;
     color: var(--accent);
   }
+  /* Util classes */
+  .padding {
+    padding: 20px;
+  }
+
+  .padding-inline {
+    padding: 0 20px;
+  }
+
+  .highlight {
+    color: var(--black);
+    background: var(--accent);
+  }
 }
+
 
   /* Scrollbar styled */
   body::-webkit-scrollbar {
@@ -91,7 +105,6 @@ const GlobalStyle = createGlobalStyle`
     scrollbar-width: thin;
     scrollbar-color: var(--accent) var(--purple);
   }
-
   `;
 
 type Props = {

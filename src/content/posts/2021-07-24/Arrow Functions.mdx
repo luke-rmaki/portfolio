@@ -5,7 +5,7 @@ title: "Arrow Functions"
 image: "images/preview.png"
 ---
 
-Arrow Functions provide two main benefits or features compared to regular function definitions: more concise syntax, and lexical scoping of this. Let's take a quick look at both.
+Arrow Functions provide two main benefits or features compared to regular function definitions: more concise syntax, and lexical scoping of "this". Let's take a quick look at both.
 
 ## Arrow Function Syntax
 
@@ -25,31 +25,57 @@ setTimeout(() => {
 
 ### Syntax variations:
 
-> As you can see in the above example, **arrow functions** use **=>** to declare a function. This example highlights one of best uses for **arrow functions**, anonymous callbacks. We no longer need to write out the _function_ keyword when declaring an anonymous function.
+Depending on the number of arguments and the content of the function, arrow functions can be declared in a number of ways:
 
-Let’s take a look at another example. Take the following function:
+```javascript
+// No arguments
+const func = () => {
+  // function body
+};
 
-<!-- ![https://cdn-images-1.medium.com/max/2000/1*FBS0GcfuBtmj8g-8utTRUw.png](https://cdn-images-1.medium.com/max/2000/1*FBS0GcfuBtmj8g-8utTRUw.png) -->
+// One argument - no parenthesis are needed for one argument
+const func = x => {
+  // function body
+};
 
-Here is how we could rewrite it using arrow functions:
+// Two arguments - parenthesis are needed
+const func = (x, y) => {
+  // function body
+};
 
-<!-- ![https://cdn-images-1.medium.com/max/2000/1*AANR7FquEonzKza4DVpVCQ.png](https://cdn-images-1.medium.com/max/2000/1*AANR7FquEonzKza4DVpVCQ.png) -->
+// Implicit return
+const func = (x, y) => x + y;
+```
 
-This example highlights an important point regarding returning from **arrow functions**. To understand this point, we need to understand the difference between “expressions” and “statements”. Basically speaking, an “expression” creates a value, while a “statement” performs an action. In the above example, x + y is an expression as it creates a value. So if an **arrow function** contains a single expression, like the one above, the expression is automatically returned. However, if the function includes multiple expressions or statements, we need to include the curly braces ({}) and explicitly call **return** on the value we want to return.
+### Implicit returns
 
-Let’s look at writing an **arrow function** with only one parameter:
+Note the last version in the above code block. If an arrow function contains a single expression, you can exclude curly braces and a return statement. To better understand this, its important to understand the difference between an "Expression" and a "Statement".
 
-<!-- ![https://cdn-images-1.medium.com/max/2000/1*_hIg_H1fr3EhmFv8nWoUYA.png](https://cdn-images-1.medium.com/max/2000/1*_hIg_H1fr3EhmFv8nWoUYA.png) -->
+<br />
 
-As you can see, if we only have one parameter we can omit the parentheses.
+In basic terms, an "Expression" resolves to a value, e.g. 3 + 4. A "Statement" is a set of instructions, e.g. `document.querySelector('.list').innerHTML = "Hello world"`.
 
-Let’s quickly review the various different ways we can write arrow functions:
+<br />
 
-<!-- ![https://cdn-images-1.medium.com/max/2000/1*PJWWuv52VhWvDThtItQvBA.png](https://cdn-images-1.medium.com/max/2000/1*PJWWuv52VhWvDThtItQvBA.png) -->
+If an arrow function only contains a single expression, we can omit the **return** keyword. This is particularly useful in simple callbacks, for instance in a map or filter function:
 
-Now let’s look at how **arrow functions** affect the _this_ keyword.
+```javascript
+const array = [1, 2, 3, 4];
 
----
+// Arrow function
+const doubledArray = array.map(item => item * 2);
+
+// Traditional function
+const doubledArray = array.map(function (item) {
+  return item * 2;
+});
+```
+
+## Lexical scoping
+
+Arrow functions also have an effect on how the **this** keyword works, more specifically what it refers to.
+
+<!--
 
 ## Lexical scoping of this
 
@@ -63,4 +89,4 @@ Don’t worry if this doesn’t make much sense, it probably just means that you
 
 In summary, using **arrow functions** can help us write cleaner, more concise code. Hopefully this article has also helped you to understand how **arrow functions** work with the _this_ keyword.
 
-I love using arrow functions. But just remember that not every function can or should be written as an **arrow function**. An example of this is when declaring methods for an object, which we’ll look at in the next article.
+I love using arrow functions. But just remember that not every function can or should be written as an **arrow function**. An example of this is when declaring methods for an object, which we’ll look at in the next article. -->

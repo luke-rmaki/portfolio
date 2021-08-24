@@ -1,12 +1,12 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 // Component imports
 import { BlogList } from '../components/blog/BlogList';
 import { Layout } from '../components/global/Layout';
 import { Menu } from '../components/global/Menu';
 
-import { MainHeading } from '../components';
+import { MainHeading, Paragraph } from '../components';
 import { BlogOverviewData } from '../utils/types';
 
 type Props = {
@@ -27,6 +27,23 @@ const Blog = (props: Props) => {
     <Layout title="Blog">
       <Menu path={path} />
       <MainHeading>Blog</MainHeading>
+      <Paragraph className="padding">
+        These are a collection of articles about Web Development and Web
+        Development related topics. This a largely a place to collect tidbits of
+        knowledge and explain things to consolidate them in my own mind.
+        Hopefully it can be of some use to you. If you find any errors or have
+        any suggestions, please email me at{` `}
+        <a className="highlight" href="mailto:luke@rmaki.com.au">
+          luke@rmaki.com.au
+        </a>
+        {` `}
+        or message me on anyone of the social media platforms on the{` `}
+        <Link className="highlight" to="/about">
+          About
+        </Link>
+        {` `}
+        page.
+      </Paragraph>
       <BlogList list={edges} />
     </Layout>
   );

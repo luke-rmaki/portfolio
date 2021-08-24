@@ -5,6 +5,7 @@ module.exports = {
     'react/prop-types': `off`,
     'react/jsx-one-expression-per-line': `off`,
   },
+  ignorePatterns: [`*.mdx`],
   // settings: {
   //   'import/resolver': {
   //     alias: {
