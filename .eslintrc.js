@@ -1,29 +1,19 @@
 module.exports = {
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:prettier/recommended',
-  ],
-  ignorePatterns: ['cypress/', '__tests__/'],
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
-  env: {
-    browser: true,
-    node: true,
-    es6: true,
-  },
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
-    sourceType: 'module', // Allows for the use of imports
-  },
+  extends: [`rmaki`, `react-app`],
+
   rules: {
-    'react/prop-types': 'off',
+    'react/prop-types': `off`,
+    'react/jsx-one-expression-per-line': `off`,
   },
-  overrides: [],
+  ignorePatterns: [`*.mdx`],
+  // settings: {
+  //   'import/resolver': {
+  //     alias: {
+  //       map: [
+  //         [`@utils`, `./src/utils`],
+  //         [`@global`, `./src/components/global`],
+  //       ],
+  //     },
+  //   },
+  // },
 };

@@ -8,6 +8,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -34,33 +35,38 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/src/content/blog`,
+        path: `${__dirname}/src/content/posts`,
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        gatsbyRemarkPlugins: [
           `gatsby-remark-relative-images`,
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
               linkImagesToOriginal: false,
-              sizeByPixelDensity: true,
               showCaptions: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              theme: `one-dark`,
             },
           },
         ],
       },
     },
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Luke Ruokaismaki Portfolio',
-        short_name: 'RMAKI Portfolio',
-        start_url: '/',
-        icon: 'src/assets/images/logo.png',
+        name: `Luke Ruokaismaki Portfolio`,
+        short_name: `RMAKI Portfolio`,
+        start_url: `/`,
+        icon: `src/assets/images/logo.png`,
       },
     },
   ],
