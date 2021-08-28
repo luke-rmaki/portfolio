@@ -33,7 +33,6 @@ const Form = () => {
 
   async function formSubmit(e) {
     e.preventDefault();
-    const form = e.target;
     try {
       await fetch(`/`, {
         method: `POST`,
