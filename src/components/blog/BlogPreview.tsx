@@ -34,7 +34,6 @@ export const BlogPreview = (props: Props) => {
           image={getImage(edge.node.frontmatter.image)}
         />
       </Link>
-      <hr />
     </StyledBlogPreview>
   );
 };
@@ -52,6 +51,8 @@ const StyledBlogPreview = styled.article`
 
   /* Desktop layout */
   @media (min-width: 1000px) {
+    padding: 0 100px;
+
     a {
       flex-direction: row;
       gap: 50px;
@@ -89,10 +90,6 @@ const StyledBlogPreview = styled.article`
 
   p {
     padding: 0 20px;
-  }
-
-  hr {
-    margin-top: 100px;
   }
 
   section {

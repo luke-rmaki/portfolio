@@ -18,6 +18,8 @@ export const BlogList = (props: Props) => {
           edge={edge}
         />
       ))}
+
+      <hr />
     </BlogListWrapper>
   );
 };
@@ -26,7 +28,7 @@ const BlogListWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 1000px) {
-    padding: 0 100px;
-  }
+  /* @media (min-width: 1000px) { */
+  /* padding: 0 100px; */
+  /* } */
 `;

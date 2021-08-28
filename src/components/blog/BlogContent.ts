@@ -4,7 +4,8 @@ const BlogContent = styled.article`
   padding: 50px 0 150px 0;
 
   h2,
-  h3 {
+  h3,
+  h4 {
     font-family: var(--font);
     padding: 0 25px;
   }
@@ -21,6 +22,13 @@ const BlogContent = styled.article`
     color: var(--purple-light-2);
     font-size: 1.3rem;
     margin: 50px 0 0 0;
+  }
+
+  h4 {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-top: 25px;
+    font-style: italic;
   }
 
   p {
@@ -70,11 +78,22 @@ const BlogContent = styled.article`
     }
   }
 
+  ul {
+    padding: 10px 25px;
+    li {
+      list-style-type: none;
+      color: var(--white);
+      &::before {
+        content: '=> ';
+      }
+    }
+  }
   /*  Desktop styles */
 
   @media (min-width: 1000px) {
     h2,
     h3,
+    h4,
     p,
     blockquote {
       padding: 0 100px;

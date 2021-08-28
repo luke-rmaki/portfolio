@@ -25,7 +25,7 @@ setTimeout(() => {
 
 ### Syntax variations:
 
-Depending on the number of arguments and the content of the function, arrow functions can be declared in a number of ways:
+Depending on the number of arguments and the content of the function, arrow functions can be declared in several ways:
 
 ```javascript
 // No arguments
@@ -49,7 +49,7 @@ const func = (x, y) => x + y;
 
 ### Implicit returns
 
-Note the last version in the above code block. If an arrow function contains a single expression, you can exclude curly braces and a return statement. To better understand this, its important to understand the difference between an "Expression" and a "Statement".
+Note the last version in the above code block. If an arrow function contains a single expression, you can exclude curly braces and a return statement. To better understand this, it's important to understand the difference between an "Expression" and a "Statement".
 
 <br />
 
@@ -73,20 +73,114 @@ const doubledArray = array.map(function (item) {
 
 ## Lexical scoping
 
-Arrow functions also have an effect on how the **this** keyword works, more specifically what it refers to.
+Arrow functions also affect how the **this** keyword works, more specifically what it refers to.
 
-<!--
+### What is this?
 
-## Lexical scoping of this
+Simply put, **this** refers to the object that is executing a function. Think about the various ways you can declare a function in JavaScript (before Arrow Functions):
 
-In the context of _functions_ and _this_, lexical scoping basically means that a function gets it’s value of _this_ from the surrounding code (the actual definition is much more complicated and involves how the JavaScript engine compiles code at run-time).
+#### Regular function:
 
-Normal functions get their value of _this_ from the context in which they are **called**. This means that if we want to access the _this_ keyword from the context in which the function was **defined**, we would have to bind _this_ to the function using the _.bind(this)_ method.
+```javascript
+function greet(name) {
+  console.log(`Hello ${name}`);
+}
+```
 
-**Arrow functions** get their value of _this_ from the context in which they are **defined**. _This_ cannot be bound to an **arrow function**.
+#### Object methods:
 
-Don’t worry if this doesn’t make much sense, it probably just means that you haven’t had to deal with lexical scoping yet. But if you run into problems using _this_, or see code that uses the _.bind(this)_ method, or you see _var that = this_ then it’s likely that you are running into problems with the scoping of _this_. In that case, using **arrow functions** may solve your problems.
+```javascript
+const cat = {
+  name: "Todd",
+  age: 1,
+  speak: function () {
+    console.log("Meow");
+  },
+};
+```
 
-In summary, using **arrow functions** can help us write cleaner, more concise code. Hopefully this article has also helped you to understand how **arrow functions** work with the _this_ keyword.
+#### Constructors:
 
-I love using arrow functions. But just remember that not every function can or should be written as an **arrow function**. An example of this is when declaring methods for an object, which we’ll look at in the next article. -->
+```javascript
+function Cat(name, age) {
+  this.name = name; // notice we're referencing this
+  this.age = age;
+}
+
+const oscar = new Cat("Oscar", 1);
+```
+
+Provided you are not running JavaScript in 'strict' mode, **this** will have a value in each of the above functions.
+
+#### Regular functions:
+
+**This** refers to the global object, which in the browser refers to the _window_, and in Node refers to _global_ (Note: Deno's global object is also called 'Window')
+
+#### Object methods:
+
+**This** in an object method refers to the object itself:
+
+```javascript
+const milly = {
+  name: "Milly",
+  age: 15,
+  printDetails: function () {
+    console.log(`${this.name} is ${this.age} years old`); // Outputs: 'Milly is 15 years old'
+  },
+};
+```
+
+#### Constructors:
+
+Since a constructor is called using the **new** keyword, this refers to the instance of the object being created by the constructor (Note: calling a constructor without the **new** keyword returns undefined). See the example above for usage of **this** in a constructor.
+
+### How arrow functions affect "this"
+
+The simplest way to explain the difference between **this** in regular functions and arrow functions is that: in a regular function, **this** refers to the object that _called_ the function; whereas in an arrow function, **this** refers to the object that the _defined_ the function. Consider the following examples:
+
+#### Arrow function declared at the top level:
+
+```javascript
+const topLevelArrow = () => {
+  console.log(this); // Output: Global object
+};
+```
+
+nothing new there.
+
+<br />
+
+#### Object methods:
+
+```javascript
+const milly = {
+  name: "Milly",
+  age: 15,
+  printDetails: () => {
+    console.log(`${this.name} is ${this.age} years old`); // Output: 'undefined is undefined years old'
+  },
+};
+```
+
+So what's the difference here? When you declared the object, the object is _defined_ in the global object (you can easily test this by console logging the global **this**. You should be able to see the object you created as a property of the global object). Declaring a function as a method of your object means that you are defining the function in the global object. It would be the same as doing this:
+
+```javascript
+function meow() {
+  console.log(`${this.name} meowed`);
+}
+
+const todd = {
+  name: "Todd",
+  makeSound: meow,
+};
+
+todd.makeSound(); // Output: 'Todd meowed'
+```
+
+Because you used a regular function definition, even though the "meow" function was declared completely separately from the "todd" object, **this** still references "todd" because that's the object that called the "meow" function.
+
+But as mentioned before, **this** in an arrow function refers to the object that defined the function, which as also mentioned above is the global object. Since the "name" and "age" properties are properties of the "todd" object, not the global object, when referencing "this.name" or "this.age" in an arrow function, **this** doesn't have those properties defined on it, because **this** is the global object.
+
+## Conclusion
+
+Which function type is better to use? In a lot of cases, that comes down to ascetics; which syntax you prefer. But it's important to know the difference in scoping, because in some cases, because of the way each function deals with **this**, you would need to use one instead of the other (Note: there are other ways around lexical scoping, like using .bind()). So pick the best tool for the job.

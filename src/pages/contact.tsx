@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Component imports
-import { Form } from '../components/contact';
+import Form from '../components/contact/Form';
 import { Layout } from '../components/global/Layout';
 import { Menu } from '../components/global/Menu';
 import { MainHeading } from '../components';

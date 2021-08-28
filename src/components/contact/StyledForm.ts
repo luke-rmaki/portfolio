@@ -1,29 +1,49 @@
 import styled from 'styled-components';
 
-const StyledForm = styled.div`
+type StyledProps = {
+  step: number;
+};
+const StyledForm = styled.div<StyledProps>`
   form {
     text-align: center;
     margin: 100px auto;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: ${(props) => (props.step === 1 ? `40px` : `200px`)};
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    @media screen and (min-width: 1000px) {
+    // wrapper for input and button
+    span {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px var(--white) solid;
+      border-radius: 50px;
+      padding-inline: ${(props) => (props.step === 1 ? `5px 0` : `10px 0`)};
+      /* padding-block: ${(props) => (props.step === 1 ? `0` : `20px`)}; */
+      width: 90%;
+      max-width: 550px;
+    }
+
+    @media (min-width: 500px) {
       width: 80%;
     }
 
+    @media (min-width: 700px) {
+      width: 60%;
+    }
+
+    // main input/text area
     input:not([type='submit']),
     textarea {
+      flex: 1 0;
       background-color: var(--black);
-      border: 1px solid var(--white);
+      border: hidden;
       padding: 5px 10px;
-      border-radius: ${(props) => (props.step === 1 ? `50px` : `20px`)};
-      grid-column: 5 / 9;
-      grid-row: 1 / 2;
       color: var(--white);
       font-family: 'Montserrat', sans-serif;
-      transition: all 1s;
+      transition: all 0.5s;
 
       &::placeholder {
         color: var(--white);
@@ -33,38 +53,41 @@ const StyledForm = styled.div`
         font-family: 'Montserrat', sans-serif;
         color: var(--white);
       }
-      @media screen and (max-width: 600px) {
-        grid-column: 4 / 10;
-      }
     }
 
     input[type='submit'],
     button {
-      @media screen and (max-width: 600px) {
-        grid-column: 9 / 10;
-      }
       transition: all 0.5s;
-      grid-column: 8 / 9;
       grid-row: 1;
       border-radius: 50px;
-      background-color: var(--main);
+      color: var(--black);
       border: none;
-      color: var(--white);
       font-size: 20px;
-      height: 40px;
+      height: 50px;
+      width: 50px;
       z-index: 10;
-      align-self: ${(props) => (props.step === 1 ? `start` : `end`)};
       cursor: pointer;
+      background: var(--accent);
 
       &:hover {
-        background-color: var(--main-shade);
+        background-color: var(--purple);
       }
+    }
+
+    input[type='email'] {
+      display: ${(props) => (props.step === 2 ? `none` : `block`)};
+      opacity: ${(props) => (props.step === 2 ? 0 : 1)};
     }
 
     textarea {
       display: ${(props) => (props.step === 1 ? `none` : `block`)};
       opacity: ${(props) => (props.step === 1 ? 0 : 1)};
       resize: none;
+    }
+
+    input[type='submit'] {
+      height: 100px;
+      width: 80px;
     }
 
     label {
