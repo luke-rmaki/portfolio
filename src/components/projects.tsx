@@ -27,6 +27,7 @@ export const Projects = () => (
 );
 
 const StyledProjects = styled.section`
+  font-family: var(--font);
   h2 {
     padding: 10px;
   }

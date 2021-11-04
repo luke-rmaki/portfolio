@@ -59,6 +59,7 @@ const GlobalStyle = createGlobalStyle`
 
   ul.bullet {
     li {
+      font-family: var(--font);
       list-style-type: none;
       &::before {
         content: "=> ";
