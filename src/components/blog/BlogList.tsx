@@ -12,14 +12,15 @@ export const BlogList = (props: Props) => {
   return (
     <BlogListWrapper>
       {list.map((edge) => (
-        <BlogPreview
-          key={edge.node.frontmatter.path}
-          data-cy="blog-post"
-          edge={edge}
-        />
+        <>
+          <BlogPreview
+            key={edge.node.frontmatter.path}
+            data-cy="blog-post"
+            edge={edge}
+          />
+          <hr />
+        </>
       ))}
-
-      <hr />
     </BlogListWrapper>
   );
 };

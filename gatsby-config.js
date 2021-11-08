@@ -52,9 +52,17 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-remark-mermaid`,
+            options: {
+              language: `mermaid`,
+              theme: `dark`,
+            },
+          },
+          {
             resolve: `gatsby-remark-highlight-code`,
             options: {
               theme: `one-dark`,
+              terminal: `carbon`,
             },
           },
         ],

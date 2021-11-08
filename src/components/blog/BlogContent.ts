@@ -31,10 +31,11 @@ const BlogContent = styled.article`
     font-style: italic;
   }
 
-  p {
+  p,
+  ul {
     font-family: var(--font);
-    font-size: 1rem;
     color: var(--white);
+    font-size: 1rem;
     padding: 10px 25px;
     line-height: 1.8rem;
 
@@ -46,6 +47,7 @@ const BlogContent = styled.article`
 
     em {
       padding: 0;
+      font-style: italic;
     }
   }
 
@@ -55,6 +57,28 @@ const BlogContent = styled.article`
 
   deckgo-highlight-code {
     margin: 40px 0;
+  }
+
+  .mermaid {
+    text-align: center;
+
+    // subgraphs background
+    .clusters {
+      rect {
+        fill: var(--purple) !important;
+      }
+      .nodeLabel {
+        display: none !important;
+      }
+    }
+
+    // line labels
+    .edgeLabels {
+      span.edgeLabel {
+        background: var(--purple) !important;
+        color: var(--white) !important;
+      }
+    }
   }
 
   blockquote {
@@ -79,8 +103,11 @@ const BlogContent = styled.article`
   }
 
   ul {
-    padding: 10px 25px;
+    line-height: 2.6rem;
+    text-indent: -25px;
+    margin-left: 23px;
     li {
+      font-family: var(--font);
       list-style-type: none;
       color: var(--white);
       &::before {
@@ -95,6 +122,7 @@ const BlogContent = styled.article`
     h3,
     h4,
     p,
+    ul,
     blockquote {
       padding: 0 100px;
     }

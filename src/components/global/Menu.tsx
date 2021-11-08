@@ -26,6 +26,7 @@ const MenuWrapper = styled.nav<StyledProps>`
   }
 
   .modal {
+    font-family: var(--font);
     position: fixed;
     top: 0px;
     left: 0px;

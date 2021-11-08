@@ -78,6 +78,7 @@ const StyledBlogPreview = styled.article`
 
     span {
       color: var(--white);
+      font-family: var(--font);
     }
 
     svg {
@@ -97,16 +98,16 @@ const StyledBlogPreview = styled.article`
   }
 
   &:hover {
-    background: var(--accent);
-
+    transform: scale(1.05);
+    box-shadow: 4px 0px 6px 4px var(--black-dark-1);
     h2,
     p,
     span {
-      color: var(--black);
+      color: var(--accent);
     }
 
     svg > line {
-      stroke: var(--black);
+      stroke: var(--white);
     }
   }
 `;
