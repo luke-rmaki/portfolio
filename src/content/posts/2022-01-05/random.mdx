@@ -1,0 +1,39 @@
+---
+path: "/blog/js-random"
+date: "2022-01-05"
+title: "SNIPPET: Generating random numbers"
+image: "images/preview.jpg"
+---
+
+I got tired of having to Google this each time I wanted to generate a random number in a range. So here it is:
+
+## Code
+
+The following generates a random number between 0 and 100 (i.e the number will always be less than 100 but greater than or equal to 0):
+
+```javascript
+const lowerRange = Math.ceil(0);
+const upperRange = Math.floor(100);
+const randomInt = Math.floor(
+  Math.random() * (upperRange - lowerRange) + lowerRange
+);
+```
+
+If you want to understand whats going here, keep reading.
+
+## Explanation
+
+- **Math.ceil(0):** Math.ceil(n) rounds a number _n_ to the nearest / largest integer (i.e Math.ceil(0.2) returns 1). In the example, passing 0 to Math.ceil will return 0.
+- **Math.floor(100)**: Math.floor(n) rounds a number _n_ to the nearest / largest integer less than or equal to _n_ (i.e. Math.floor(1.7) returns 1). In the example, passing 100 to Math.floor will return 100.
+
+To generate _randomInt_ we:
+
+- Subtract the lower range from the upper range (i.e 100 - 0 = 100)
+- Multiply the result by a random number between 0 and 1 (i.e 100 \* 0.5 = 50)
+- Add the lower range to the result (i.e 50 + 0 = 50)
+
+Since Math.random() can return 0, its possible to get a number that is equal to the lower range (since **0 \* (upperRange - lowerRange) + lowerRange** is the same as just **lowerRange**). Also, since Math.random() can't return 1 (the maximum being 0.9), it will be impossible to get a number equal to the upper range even if the lower range is 0 (i.e 0.9 \* **(upperRange - 0) + 0** is the same as **0.9 \* upperRange**).
+
+---
+
+Just a final note: as the [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) say, Math.random() is not suitable for cryptographic purposes, i.e don't use it for anything related to security.

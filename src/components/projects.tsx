@@ -35,6 +35,9 @@ const StyledProjects = styled.section`
     display: flex;
     gap: 20px;
     overflow-x: scroll;
+    li {
+      font-family: var(--font);
+    }
   }
 
   [data-project] {
