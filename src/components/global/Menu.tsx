@@ -51,8 +51,11 @@ const MenuWrapper = styled.nav<StyledProps>`
           color: var(--white);
           text-decoration: none;
           font-size: 1.5rem;
+          font-family: var(--font);
+          transition: all 0.1s ease-in;
 
-          &:hover {
+          &:hover,
+          &:focus {
             color: var(--accent);
           }
         }

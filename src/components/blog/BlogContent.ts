@@ -31,7 +31,8 @@ const BlogContent = styled.article`
     font-style: italic;
   }
 
-  p {
+  p,
+  ul {
     font-family: var(--font);
     font-size: 1rem;
     color: var(--white);
@@ -46,6 +47,17 @@ const BlogContent = styled.article`
 
     em {
       padding: 0;
+    }
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
     }
   }
 
@@ -79,10 +91,11 @@ const BlogContent = styled.article`
   }
 
   ul {
-    padding: 10px 25px;
+    padding: 0px 100px;
     li {
       list-style-type: none;
-      color: var(--white);
+      line-height: 1.5rem;
+      padding-bottom: 2rem;
       &::before {
         content: '=> ';
       }
